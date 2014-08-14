@@ -27,7 +27,7 @@ if (!defined('DB_USER')) {
 	define('DB_USER', 'root');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'root');
+	define('DB_PASSWORD', '123');
 }
 if (!defined('DB_HOST')) {
 	define('DB_HOST', 'localhost');

@@ -100,7 +100,7 @@ body {
   }
 
   &.page-template-page-contact-php {
-    background: url(../images/contact-bg.jpg) no-repeat 0 100px fixed #e6e7e8;
+    background: url(../images/contact-bg.jpg) no-repeat -100px 80px fixed #e6e7e8;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -745,7 +745,7 @@ footer {
   .content {
     width: 530px;
     position: absolute;
-    top: 10px;
+    top: 50px;
     right: 0;
     padding-bottom: 50px;
 
