@@ -23,7 +23,6 @@ Pellentesque suscipit lorem eu hendrerit consectetur.</p>
               'order' => 'ASC',
               'suppress_filters'=>0
             ));
-
     ?>
     <?php foreach ( $posts as $post ): setup_postdata( $post );?>
       <a class="job" href="#j<?php $post->ID?>">
