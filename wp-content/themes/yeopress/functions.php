@@ -229,9 +229,9 @@ if(function_exists("register_field_group"))
 		'location' => array (
 			array (
 				array (
-					'param' => 'page',
-					'operator' => '==',
-					'value' => '4',
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page-about.php',
 					'order_no' => 0,
 					'group_no' => 0,
 				),

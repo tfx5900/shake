@@ -80,7 +80,7 @@ Template Name: About Page
           <h3><?php the_field('job_title'); ?></h3>
           <?php the_content();?>
         </div>
-        <span class="close-button"></span>
+        <span class="close-button"><span></span></span>
         <div class="clear"></div>
       </div>
     <?php endforeach;?>

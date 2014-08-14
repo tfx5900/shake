@@ -47,7 +47,7 @@ Pellentesque suscipit lorem eu hendrerit consectetur.</p>
       <div class="content">
         <?php the_content();?>
       </div>
-      <span class="close-button"></span>
+      <span class="close-button"><span></span></span>
     </div>
   <?php endforeach; ?>
 
