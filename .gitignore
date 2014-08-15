@@ -10,7 +10,7 @@ node_modules
 
 # Ignore config
 local-config.php
-
+wp-config.php
 
 # Operating system files
 .Spotlight-V100
