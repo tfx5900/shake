@@ -4,7 +4,9 @@ function setPageSize() {
         windowsH = 600;
     }
     var windowsW = $(window).width();
-    $('.homepage, .expertis-page').css('min-height',windowsH - 140);
+    $('.homepage, .homepage .wrapper').css('height',windowsH - 90);
+    $('.expertis-page').css('min-height',windowsH - 140);
+    $('.homepage video').css('width', windowsW).css('height','auto');
 
 }
 

@@ -12,10 +12,10 @@ Template Name: Expertis Page
     </div>
 
     <div class="icons">
-      <a href="#branding"></a>
-      <a href="#industrial"></a>
-      <a href="#engineering"></a>
-      <a href="#packaging"></a>
+      <a href="#branding" class="branding"></a>
+      <a href="#industrial" class="industrial"></a>
+      <a href="#engineering" class="engineering"></a>
+      <a href="#packaging" class="packaging"></a>
       <div class="clear"></div>
     </div>
 
