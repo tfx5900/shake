@@ -177,6 +177,35 @@ function create_jobs() {
 	);
 }
 
+//Home Slide
+add_action( 'init', 'create_homeslides' );
+function create_homeslides() {
+    $labels = array(
+        'name' => _x('Home Slides', 'post type general name'),
+        'singular_name' => _x('Home Slide', 'post type singular name'),
+        'add_new' => _x('Add New', 'Home Slide'),
+        'add_new_item' => __('Add New Home Slide'),
+        'edit_item' => __('Edit Home Slide'),
+        'new_item' => __('New Home Slide'),
+        'view_item' => __('View Home Slide'),
+        'search_items' => __('Search Home Slides'),
+        'not_found' =>  __('No Home Slides found'),
+        'not_found_in_trash' => __('No Home Slides found in Trash'),
+        'parent_item_colon' => ''
+    );
+
+    $supports = array('title', 'editor', 'custom-fields', 'revisions', 'thumbnail');
+
+    register_post_type( 'homeslide',
+        array(
+            'labels' => $labels,
+            'public' => true,
+            'supports' => $supports,
+            'has_archive' => true
+        )
+    );
+}
+
 add_action( 'init', 'build_taxonomies', 0 );
 
 function build_taxonomies() {
@@ -460,4 +489,90 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 
+}
+
+if(function_exists("register_field_group"))
+{
+    register_field_group(array (
+        'id' => 'acf_homepage-slideshow',
+        'title' => 'Homepage Slideshow',
+        'fields' => array (
+            array (
+                'key' => 'field_53f08ba2d1265',
+                'label' => 'Slide Type',
+                'name' => 'slide_type',
+                'type' => 'radio',
+                'required' => 1,
+                'choices' => array (
+                    'video' => 'Video',
+                    'image' => 'Image',
+                ),
+                'other_choice' => 0,
+                'save_other_choice' => 0,
+                'default_value' => 'image',
+                'layout' => 'vertical',
+            ),
+            array (
+                'key' => 'field_53f08bd5d1266',
+                'label' => 'Video Link',
+                'name' => 'video_link',
+                'type' => 'text',
+                'conditional_logic' => array (
+                    'status' => 1,
+                    'rules' => array (
+                        array (
+                            'field' => 'field_53f08ba2d1265',
+                            'operator' => '==',
+                            'value' => 'video',
+                        ),
+                    ),
+                    'allorany' => 'all',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => '',
+            ),
+            array (
+                'key' => 'field_53f08befd1267',
+                'label' => 'Image Link',
+                'name' => 'image_link',
+                'type' => 'image',
+                'conditional_logic' => array (
+                    'status' => 1,
+                    'rules' => array (
+                        array (
+                            'field' => 'field_53f08ba2d1265',
+                            'operator' => '==',
+                            'value' => 'image',
+                        ),
+                    ),
+                    'allorany' => 'all',
+                ),
+                'save_format' => 'url',
+                'preview_size' => 'medium',
+                'library' => 'all',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'homeslide',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
 }
