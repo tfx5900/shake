@@ -25,7 +25,7 @@ Pellentesque suscipit lorem eu hendrerit consectetur.</p>
             ));
     ?>
     <?php foreach ( $posts as $post ): setup_postdata( $post );?>
-      <a class="job" href="#j<?php $post->ID?>">
+      <a class="job" href="#j<?php echo $post->ID?>">
         <?php the_title();?>
         <span><?php the_field("job_number")?></span>
       </a>
@@ -40,7 +40,7 @@ Pellentesque suscipit lorem eu hendrerit consectetur.</p>
 </div>
 <div class="job-full-list">
   <?php foreach ( $posts as $post ): setup_postdata( $post );?>
-    <div class="job" id="j<?php $post->ID?>">
+    <div class="job" id="j<?php echo $post->ID?>">
       <h2 class="red">Position</h2>
       <h1><?php the_title();?></h1>
       <div class="content">

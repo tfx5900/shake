@@ -1,4 +1,5 @@
 var windowsH = 0;
+var resetPos = false;
 function setPageSize() {
     windowsH = $(window).height();
     if (windowsH < 600) {
@@ -8,6 +9,8 @@ function setPageSize() {
     $('.homepage, .homepage .wrapper').css('height', windowsH - 80);
     $('.expertis-page').css('min-height', windowsH - 140);
     $('.homepage video').css('width', windowsW).css('height', 'auto');
+    $('.job-full-list').css('height',$(document).height());
+    resetPos = true;
 
 }
 
@@ -29,6 +32,10 @@ function slide() {
     if (currentTop - boxHeight > maxLength) {
         move = currentTop - boxHeight;
     }
+    if (resetPos) {
+        move = 0;
+        resetPos = false;
+    }
     $('.slides').animate({top: move}, 1000);
 }
 
@@ -38,8 +45,25 @@ $(function () {
     $.event.add(window, 'load', setPageSize);
     highlightURL();
 
+    $(".nano").nanoScroller({ sliderMinHeight: 70, preventPageScrolling: true });
+
     if ($('.homepage').is('div')) {
         setInterval(slide, 5000);
+    }
+
+    if ($('.award-photos').is('div')) {
+        $(".award-photos").owlCarousel({
+            autoPlay: true,
+            autoplayTimeout: 5000,
+            dots: false,
+            items : 4,
+            itemsDesktop : [1199,4],
+            itemsDesktopSmall : [979,3],
+            nav: true,
+            itemsScaleUp: true,
+            center: true,
+            loop:true
+        });
     }
 
     $('.about-page .nav-menu a').click(function (e) {
@@ -82,7 +106,9 @@ $(function () {
     $('.job-list a').click(function (e) {
         e.preventDefault();
         $('.job-full-list').fadeIn(500);
-        $($(this).attr('href')).fadeIn(500);
+        $($(this).attr('href')).fadeIn(500, function(){
+            setPageSize();
+        });
     });
 
     $('.job-full-list .job').click(function (e) {
@@ -93,6 +119,7 @@ $(function () {
         e.preventDefault();
         $('.job-full-list').fadeOut(500);
         $('.job-full-list .job').fadeOut(500);
+        setPageSize();
     });
 
     $('.work-page .nav-menu a').click(function (e) {

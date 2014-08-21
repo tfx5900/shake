@@ -862,6 +862,9 @@ footer {
   width: 50%;
 }
 
+.award-page {
+  margin-bottom: 50px;
+}
 .award-page h1 {
   padding-bottom: 15px;
   margin-bottom: 15px;
@@ -872,6 +875,52 @@ footer {
 }
 .award-page .award-list a {
   margin-right: 80px;
+}
+.award-page .thumbnail {
+  float: left;
+  margin-right: 30px;
+  margin-top: 55px;
+  display: none;
+}
+.award-page .nano {
+  height: 330px;
+}
+
+.award-photos {
+  margin-top: 30px;
+}
+.award-photos img {
+  width: 100%;
+  height: auto;
+  padding: 0px 7.5px 0 7.5px;
+}
+.award-photos .owl-nav > div {
+  text-indent: -9999px;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  opacity: 0.7;
+  margin-top: -15px;
+  overflow: hidden;
+}
+.award-photos .owl-nav .owl-prev {
+  left: 30px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.award-photos .owl-nav .owl-next {
+  right: 30px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
 }
 
 .careers-page .banner {
@@ -928,7 +977,7 @@ footer {
 .job-full-list {
   display: none;
   background: rgba(0, 0, 0, 0.8);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1037,7 +1086,7 @@ footer {
   text-align: center;
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1650px) {
   .people-list {
     width: 1600px;
     padding-left: 15px;
@@ -1055,4 +1104,81 @@ footer {
   .main-content .homepage h1 {
     left: 150px;
   }
+
+  .award-page .thumbnail {
+    display: block;
+  }
+  .award-page .content h1 {
+    border-bottom: none;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+  }
+  .award-page .content .half {
+    width: 75%;
+  }
+}
+/** nano scroller**/
+/** initial setup **/
+.nano {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nano > .nano-content {
+  position: absolute;
+  overflow: scroll;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+
+.nano > .nano-content::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  visibility: visible;
+}
+
+.nano > .nano-pane {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  width: 10px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden\9;
+  /* Target only IE7 and IE8 with this hack */
+  opacity: .01;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.nano > .nano-pane > .nano-slider {
+  background: #444;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 0 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility: visible\9;
+  /* Target only IE7 and IE8 with this hack */
+  opacity: 0.99;
 }
