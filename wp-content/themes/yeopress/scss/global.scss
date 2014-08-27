@@ -250,7 +250,7 @@ footer {
 
     h1 {
       position: absolute;
-      left: 50px;
+      left: 60px;
       bottom: 80px;
       z-index: 100;
       color: #fff;
@@ -300,8 +300,8 @@ footer {
       ul {
         li {
           float: left;
-          width: 185px;
-          margin-right: 3px;
+          width: 180px;
+          margin-right: 10px;
 
           &:last-of-type {
             margin-right: 0;
@@ -310,13 +310,17 @@ footer {
           a {
             display: block;
             padding: 10px;
-            background: #c3bab0;
-            color: #fff;
+            background: #fff;
+            border: 1px solid #000;
+            color: #000;
             text-align: center;
             width: 100%;
+            font-size: 18px;
 
             &.selected {
-              background: #f6303e;
+              border: 1px solid #f6303e;
+              color: #f6303e;
+
             }
           }
         }
@@ -380,37 +384,40 @@ footer {
     position: relative;
 
     h3 {
-      display: none;
       position: absolute;
       top: 0;
       left: 0;
       width: 305px;
       height: 226px;
-      background: rgba(0,0,0,0.7);
+      background: rgba(255,255,255,0.7);
       padding: 30px;
-      color: #fff;
-      text-transform: uppercase;
+      color: #000;
       letter-spacing: 1px;
       font-weight: 300;
+      display: none;
+      @include vertical-center;
     }
   }
 }
 
 .people-full-list {
-  display: none;
   background: rgba(0,0,0,0.8);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: none;
+  @include vertical-center;
+
 
   .person {
     display: none;
     background: #fff;
     height: 391px;
-    margin-top: 100px;
+
     padding: 0;
+
 
     .photo {
       width: 382px;
@@ -526,16 +533,16 @@ footer {
 
       h3 {
         display: none;
+        @include vertical-center;
+
         position: absolute;
         top: 0;
         left: 0;
         width: 308px;
         height: 205px;
-        background: rgba(0,0,0,0.7);
+        background: rgba(255,255,255,0.7);
         padding: 30px;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+        color: #000;
         font-weight: 300;
       }
 
@@ -589,12 +596,13 @@ footer {
     a {
       display: block;
       width: 150px;
-      height: 232px;
+      height: 180px;
       margin-right: 120px;
       float: left;
       background-size: contain;
       background-repeat: no-repeat;
-      transition: height ease-in 100ms;
+//      transition: all linear 100ms;
+      position: relative;
 
       &:last-of-type {
         margin-right: 0;
@@ -617,7 +625,25 @@ footer {
       }
 
       &:hover {
-        height: 250px;
+        height: 205px;
+        top: -15px;
+        left: -10px;
+
+        span {
+          left: 10px;
+          bottom: -20px;
+        }
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        width: 136px;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        display: block;
       }
     }
   }
@@ -794,7 +820,6 @@ footer {
       font-weight: 300;
       float: left;
       margin-right: 150px;
-      -webkit-transition: all ease-in 300ms;-moz-transition: all ease-in 300ms;-ms-transition: all ease-in 300ms;-o-transition: all ease-in 300ms;transition: all ease-in 300ms;
 
       span {
         background: #f6303e;
@@ -832,8 +857,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
 
   .job {
     display: none;
@@ -913,6 +938,7 @@ footer {
         border-left: none;
         border-right: none;
         border-bottom: 1px solid #8d8e8d;
+        font-family: "Circular";
 
         &.no-border {
           border-bottom: none;
@@ -930,6 +956,7 @@ footer {
         margin-bottom: 10px;
         border-radius: 5px;
         border: 1px solid #8d8e8d;
+        font-family: "Circular";
 
         &:focus {
           outline: none;
@@ -973,20 +1000,27 @@ footer {
   header {
     .wrapper {
       margin-left: 150px;
-      margin-rigth: 150px;
+      margin-right: 150px;
     }
   }
 
   .main-content .homepage h1 {
-    left: 150px;
+    left: 160px;
   }
 
-  .award-page {
+  .main-content .page {
+    margin-top: 115px;
+  }
+
+  .award-single-page {
     .thumbnail {
       display: block;
     }
 
     .content {
+      float: left;
+      width: 700px;
+
       h1 {
         border-bottom: none;
         margin-bottom: 7px;
@@ -994,7 +1028,7 @@ footer {
       }
 
       .half {
-        width: 75%;
+        width: 100%;
       }
     }
   }
@@ -1056,4 +1090,8 @@ footer {
 .nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
   visibility : visible\9; /* Target only IE7 and IE8 with this hack */
   opacity    : 0.99;
+}
+
+.really_simple_share {
+  margin-top: 10px;
 }

@@ -114,8 +114,8 @@ dfn {
 }
 
 mark {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
 }
 
 code,
@@ -223,7 +223,7 @@ img {
 
   pre,
   blockquote {
-    border: 1px solid black;
+    border: 1px solid #000;
     page-break-inside: avoid;
   }
 
@@ -452,7 +452,7 @@ footer {
 }
 .main-content .homepage h1 {
   position: absolute;
-  left: 50px;
+  left: 60px;
   bottom: 80px;
   z-index: 100;
   color: #fff;
@@ -492,8 +492,8 @@ footer {
 }
 .main-content .about-page .nav-menu ul li {
   float: left;
-  width: 185px;
-  margin-right: 3px;
+  width: 180px;
+  margin-right: 10px;
 }
 .main-content .about-page .nav-menu ul li:last-of-type {
   margin-right: 0;
@@ -501,13 +501,16 @@ footer {
 .main-content .about-page .nav-menu ul li a {
   display: block;
   padding: 10px;
-  background: #c3bab0;
-  color: #fff;
+  background: #fff;
+  border: 1px solid #000;
+  color: #000;
   text-align: center;
   width: 100%;
+  font-size: 18px;
 }
 .main-content .about-page .nav-menu ul li a.selected {
-  background: #f6303e;
+  border: 1px solid #f6303e;
+  color: #f6303e;
 }
 .main-content .about-page .tabs .tab {
   display: none;
@@ -555,34 +558,64 @@ footer {
   position: relative;
 }
 .people-list a h3 {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 305px;
   height: 226px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   padding: 30px;
-  color: #fff;
-  text-transform: uppercase;
+  color: #000;
   letter-spacing: 1px;
   font-weight: 300;
+  display: none;
+  /* Internet Explorer 10 */
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* Safari, Opera, and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* W3C */
+  display: box;
+  box-pack: center;
+  box-align: center;
 }
 
 .people-full-list {
-  display: none;
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  display: none;
+  /* Internet Explorer 10 */
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* Safari, Opera, and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* W3C */
+  display: box;
+  box-pack: center;
+  box-align: center;
 }
 .people-full-list .person {
   display: none;
   background: #fff;
   height: 391px;
-  margin-top: 100px;
   padding: 0;
 }
 .people-full-list .person .photo {
@@ -699,16 +732,30 @@ footer {
 }
 .work-page .works .work h3 {
   display: none;
+  /* Internet Explorer 10 */
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  /* Firefox */
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  /* Safari, Opera, and Chrome */
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  /* W3C */
+  display: box;
+  box-pack: center;
+  box-align: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 308px;
   height: 205px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   padding: 30px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: #000;
   font-weight: 300;
 }
 .work-page .single-work .left {
@@ -748,12 +795,12 @@ footer {
 .expertis-page .icons a {
   display: block;
   width: 150px;
-  height: 232px;
+  height: 180px;
   margin-right: 120px;
   float: left;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: height ease-in 100ms;
+  position: relative;
 }
 .expertis-page .icons a:last-of-type {
   margin-right: 0;
@@ -771,7 +818,23 @@ footer {
   background-image: url(../images/experis-icon-packaging.png);
 }
 .expertis-page .icons a:hover {
-  height: 250px;
+  height: 205px;
+  top: -15px;
+  left: -10px;
+}
+.expertis-page .icons a:hover span {
+  left: 10px;
+  bottom: -20px;
+}
+.expertis-page .icons a span {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 136px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  display: block;
 }
 .expertis-page .expertis {
   display: none;
@@ -947,11 +1010,6 @@ footer {
   font-weight: 300;
   float: left;
   margin-right: 150px;
-  -webkit-transition: all ease-in 300ms;
-  -moz-transition: all ease-in 300ms;
-  -ms-transition: all ease-in 300ms;
-  -o-transition: all ease-in 300ms;
-  transition: all ease-in 300ms;
 }
 .careers-page .job-list .job span {
   background: #f6303e;
@@ -980,8 +1038,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
 }
 .job-full-list .job {
   display: none;
@@ -1051,6 +1109,7 @@ footer {
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #8d8e8d;
+  font-family: "Circular";
 }
 .contact-page .content .bottom input[type="text"].no-border, .contact-page .content .bottom input[type="email"].no-border {
   border-bottom: none;
@@ -1065,6 +1124,7 @@ footer {
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid #8d8e8d;
+  font-family: "Circular";
 }
 .contact-page .content .bottom textarea:focus {
   outline: none;
@@ -1098,23 +1158,31 @@ footer {
 
   header .wrapper {
     margin-left: 150px;
-    margin-rigth: 150px;
+    margin-right: 150px;
   }
 
   .main-content .homepage h1 {
-    left: 150px;
+    left: 160px;
   }
 
-  .award-page .thumbnail {
+  .main-content .page {
+    margin-top: 115px;
+  }
+
+  .award-single-page .thumbnail {
     display: block;
   }
-  .award-page .content h1 {
+  .award-single-page .content {
+    float: left;
+    width: 700px;
+  }
+  .award-single-page .content h1 {
     border-bottom: none;
     margin-bottom: 7px;
     padding-bottom: 7px;
   }
-  .award-page .content .half {
-    width: 75%;
+  .award-single-page .content .half {
+    width: 100%;
   }
 }
 /** nano scroller**/
@@ -1182,3 +1250,9 @@ footer {
   /* Target only IE7 and IE8 with this hack */
   opacity: 0.99;
 }
+
+.really_simple_share {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=global.css.map */

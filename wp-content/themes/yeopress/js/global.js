@@ -47,6 +47,9 @@ $(function () {
 
     $(".nano").nanoScroller({ sliderMinHeight: 70, preventPageScrolling: true });
 
+    //quick fix to hide vertial algin
+    $('.people-list h3, .work h3, .people-full-list, .job-full-list').hide();
+
     if ($('.homepage').is('div')) {
         setInterval(slide, 5000);
     }
@@ -64,6 +67,10 @@ $(function () {
             center: true,
             loop:true
         });
+    }
+
+    if ($('.award-page').is('div')) {
+        $('.award-page .content').append($('.really_simple_share'));
     }
 
     $('.about-page .nav-menu a').click(function (e) {

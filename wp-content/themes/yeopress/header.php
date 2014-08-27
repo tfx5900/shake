@@ -23,7 +23,7 @@
           <li><a href="<?php bloginfo('url');?>/expertis">expertis</a></li>
           <li><a href="<?php bloginfo('url');?>/awards">award</a></li>
           <li><a href="<?php bloginfo('url');?>/careers">careers</a></li>
-          <li><a href="<?php bloginfo('url');?>/store">store</a></li>
+          <li><a href="javascript:void(0);">store</a></li>
           <li><a href="<?php bloginfo('url');?>/contact">contact</a></li>
         </ul>
         <div class="social-icons">
