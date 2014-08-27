@@ -122,9 +122,48 @@ body {
     -moz-background-size: cover;
   }
 
+  &.page-template-page-about-php {
+    background: url(../images/about-bg.jpg) no-repeat fixed #000;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  }
+
+  &.page-template-page-award-php {
+    background: url(../images/award-bg.jpg) no-repeat fixed #000;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  }
+
+  &.single-award:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background: url(../images/award-bg.jpg) no-repeat fixed #000;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+  }
+
+  &.page-template-page-works-php, &.post-type-archive-work {
+    background: url(../images/about-bg.jpg) no-repeat fixed #000;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+  }
+
   &.page-template-page-store-php {
     background: #c4bbb1;
   }
+
 }
 
 a {
@@ -310,9 +349,8 @@ footer {
           a {
             display: block;
             padding: 10px;
-            background: #fff;
-            border: 1px solid #000;
-            color: #000;
+            border: 1px solid #fff;
+            color: #fff;
             text-align: center;
             width: 100%;
             font-size: 18px;
@@ -336,11 +374,19 @@ footer {
         }
       }
     }
+
+    .content {
+      color: #fff;
+    }
   }
 }
 
 .red {
   color: $color_link;
+}
+
+.white {
+  color: #fff;
 }
 
 .content {
@@ -377,8 +423,8 @@ footer {
   a {
     display: block;
     float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
+//    margin-right: 10px;
+//    margin-bottom: 10px;
     width: 305px;
     height: 226px;
     position: relative;
@@ -389,13 +435,19 @@ footer {
       left: 0;
       width: 305px;
       height: 226px;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,0,0,0.8);
       padding: 30px;
-      color: #000;
+      color: #fff;
       letter-spacing: 1px;
       font-weight: 300;
       display: none;
+      text-align: center;
+      line-height:  1.4;
       @include vertical-center;
+
+      span {
+        text-transform: lowercase;
+      }
     }
   }
 }
@@ -502,7 +554,7 @@ footer {
     text-align: center;
     margin-bottom: 15px;
     a {
-      color: #000;
+      color: #fff;
       font-weight: 700;
       margin-right: 50px;
       text-transform: lowercase;
@@ -525,11 +577,12 @@ footer {
     .work {
       display: block;
       float: left;
-      width: 308px;
-      height: 205px;
-      margin-right: 10px;
-      margin-bottom: 10px;
+      width: 306px;
+      height: 204px;
+//      margin-right: 0px;
+//      margin-bottom: 10px;
       position: relative;
+      overflow: hidden;
 
       h3 {
         display: none;
@@ -538,11 +591,11 @@ footer {
         position: absolute;
         top: 0;
         left: 0;
-        width: 308px;
-        height: 205px;
-        background: rgba(255,255,255,0.7);
+        width: 306px;
+        height: 204px;
+        background: rgba(255,0,0,0.8);
         padding: 30px;
-        color: #000;
+        color: #fff;
         font-weight: 300;
       }
 
@@ -736,6 +789,7 @@ footer {
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #8d8e8d;
+    color: #fff;
   }
 
   .award-list {

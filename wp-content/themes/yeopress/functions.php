@@ -27,8 +27,8 @@ function theme_enqueue_scripts(){
 
 //Add Featured Image Support
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 308, 205, true );
-add_image_size('work-thumbnail',308,205,true);
+set_post_thumbnail_size( 306, 204, true );
+add_image_size('work-thumbnail',306,204,true);
 add_image_size('work-full',960,9999,false);
 add_image_size('shaker-thumbnail',305,226,true);
 add_image_size('shaker-full',382,391,true);

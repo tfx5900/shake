@@ -44,7 +44,7 @@ Template Name: About Page
 
 <div class="tab hide" id="the-shakers">
   <div class="content wrapper">
-    <h1 class="red">
+    <h1 class="white">
       Hi! We are the shakes team <br>
       Nice to meet you :)
     </h1>
@@ -62,7 +62,10 @@ Template Name: About Page
 					foreach ( $posts as $post ): setup_postdata( $post );?>
     <a href="#s<?php echo $post->ID;?>" class="person">
       <?php the_post_thumbnail('shaker-thumbnail',array('title'=>''));?>
-      <h3><?php the_title();?></h3>
+      <h3><?php the_title();?><br/>
+          <span><?php the_field('job_title'); ?></span>
+      </h3>
+
     </a>
     <?php endforeach;?>
 
