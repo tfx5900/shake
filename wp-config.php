@@ -27,7 +27,7 @@ if (!defined('DB_USER')) {
 	define('DB_USER', 'root');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'root');
+	define('DB_PASSWORD', '123');
 }
 if (!defined('DB_HOST')) {
 	define('DB_HOST', 'localhost');
@@ -69,7 +69,8 @@ define('NONCE_SALT',       '])!28aNpJEV6d)Oo%TDSY!f:G>60wNDx-i|VU;ZD=kO^mY[<x7P-
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+// $table_prefix  = 'wp_';
+$table_prefix  = 'shake_';
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -91,14 +92,18 @@ define('WPLANG', '');
  * in their development environments.
  */
 if (!defined('WP_DEBUG')) {
-	define('WP_DEBUG', false);
+    define('WP_DEBUG', false);
 }
 
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined('ABSPATH')) {
+    define('ABSPATH', dirname(__FILE__) . '/');
+}
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
+define('FS_METHOD', 'direct');

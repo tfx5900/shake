@@ -146,9 +146,9 @@ $(function () {
     });
 
     $('.works .work,.people-list .person').hover(function () {
-        $(this).find('h3').stop(0, 0).fadeIn(300);
+        $(this).find('h3').stop(0, 0).fadeIn(500);
     }, function () {
-        $(this).find('h3').stop(0, 0).fadeOut(300);
+        $(this).find('h3').stop(0, 0).fadeOut(500);
     });
 
     if ($('.page').is('div')) {

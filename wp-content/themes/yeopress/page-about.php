@@ -7,10 +7,9 @@ Template Name: About Page
 <div class="wrapper page about-page" <?php if (get_field('background_image')) { echo "data-bg='".get_field('background_image')."'"; } ?>>
   <div class="nav-menu">
     <ul>
-      <li><a href="#about" class="selected">about shakes</a></li>
-      <li><a href="#story">shakes's story</a></li>
-      <li><a href="#philosophy">shakes philosophy</a></li>
-      <li><a href="#the-shakers">the shakers</a></li>
+      <li><a href="#about" class="selected">our purpose</a></li>
+      <li><a href="#philosophy">our philosophy</a></li>
+      <li><a href="#the-shakers">our shakerz</a></li>
       <li><a href="#our-believers">our believers</a></li>
 
     </ul>
@@ -46,14 +45,14 @@ Template Name: About Page
 
   <div class="people-list">
     	<?php $posts = get_posts(array(
-								'nopaging' => true,
-								'post_type' => 'shaker',
-								'orderby' => 'menu_order',
-								'order' => 'ASC',
-								'suppress_filters'=>0
-							));
+			'nopaging' => true,
+			'post_type' => 'shaker',
+			'orderby' => 'menu_order',
+			'order' => 'ASC',
+			'suppress_filters'=>0
+		));
 
-					foreach ( $posts as $post ): setup_postdata( $post );?>
+        foreach ( $posts as $post ): setup_postdata( $post );?>
     <a href="#s<?php echo $post->ID;?>" class="person">
       <?php the_post_thumbnail('shaker-thumbnail',array('title'=>''));?>
       <h3><?php the_title();?><br/>

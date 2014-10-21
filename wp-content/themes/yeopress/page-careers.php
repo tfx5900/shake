@@ -7,9 +7,7 @@ Template Name: Careers Page
 <?php if (have_posts()) the_post();?>
 <div class="page careers-page wrapper content" <?php if (get_field('background_image')) { echo "data-bg='".get_field('background_image')."'"; } ?> >
   <h1 class="red">Be a Shakes</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec libero mauris.
-Donec consequat malesuada eros in volutpat. Mauris feugiat elit id convallis dictum.
-Pellentesque suscipit lorem eu hendrerit consectetur.</p>
+  <p>At shakes we’re looking for talented people that like to be different and don’t really care about it. Call us misfits but we love a bunch of weirdos that share the same passion. However, what we value most is a healthy portion of self-criticism for your own work and the drive for excellence beyond your limits. So if you think you have what it takes to shake then give us a shout and send us your portfolio.</p>
   <h1 class="red">Who we're looking for</h1>
   <div class="job-list">
     <?php
@@ -31,7 +29,7 @@ Pellentesque suscipit lorem eu hendrerit consectetur.</p>
     <div class="clear"></div>
   </div>
   <div class="note">
-    <p>Please accumsan, turpis vel lacinia vestibulum, quam justo mollis  turpis  vel lacinia vestibulum, quam justo mollis.</p>
+    <p>Send your application with portfolio and resume to info@shakesbkk.com.</p>
   </div>
 
 </div>

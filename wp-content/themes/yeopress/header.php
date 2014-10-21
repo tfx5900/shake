@@ -18,13 +18,13 @@
       </div>
       <div class="right nav-menu">
         <ul>
-          <li><a href="<?php bloginfo('url');?>/about">about</a></li>
-          <li><a href="<?php bloginfo('url');?>/work">works</a></li>
-          <li><a href="<?php bloginfo('url');?>/expertis">expertis</a></li>
-          <li><a href="<?php bloginfo('url');?>/awards">award</a></li>
-          <li><a href="<?php bloginfo('url');?>/careers">careers</a></li>
-<!--          <li><a href="javascript:void(0);">store</a></li>-->
-          <li><a href="<?php bloginfo('url');?>/contact">contact</a></li>
+          <li><a href="<?php bloginfo('url');?>/about">who we are</a></li>
+          <li><a href="<?php bloginfo('url');?>/expertis">what we do</a></li>
+          <li><a href="<?php bloginfo('url');?>/work">how we do it</a></li>
+          <li><a href="<?php bloginfo('url');?>/awards">things we won</a></li>
+          <li><a href="<?php bloginfo('url');?>/careers">we want you</a></li>
+          <!-- <li><a href="javascript:void(0);">store</a></li> -->
+          <li><a href="<?php bloginfo('url');?>/contact">get in touch</a></li>
         </ul>
         <div class="social-icons">
           <a href="#" class="facebook icon" target="_blank"></a>
