@@ -5,7 +5,7 @@ Template Name: Award Page
 ?>
 <?php get_header(); ?>
 <?php if (have_posts()) the_post();?>
-<div class="page award-page wrapper">
+<div class="page award-page wrapper" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
   <div class="content">
     <h1>shakes’s <span class='red'>Award</span></h1>
     <div class="half">

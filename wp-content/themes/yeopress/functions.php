@@ -584,3 +584,164 @@ if(function_exists("register_field_group"))
         'menu_order' => 0,
     ));
 }
+
+if(function_exists("register_field_group"))
+{
+    register_field_group(array (
+        'id' => 'acf_contact-background',
+        'title' => 'Contact Background',
+        'fields' => array (
+            array (
+                'key' => 'field_5408064daedd6',
+                'label' => 'Background Type',
+                'name' => 'background_type',
+                'type' => 'radio',
+                'required' => 1,
+                'choices' => array (
+                    'image' => 'Image',
+                    'video' => 'Video',
+                ),
+                'other_choice' => 0,
+                'save_other_choice' => 0,
+                'default_value' => 'image',
+                'layout' => 'vertical',
+            ),
+            array (
+                'key' => 'field_5408067baedd7',
+                'label' => 'Image',
+                'name' => 'image_url',
+                'type' => 'image',
+                'conditional_logic' => array (
+                    'status' => 1,
+                    'rules' => array (
+                        array (
+                            'field' => 'field_5408064daedd6',
+                            'operator' => '==',
+                            'value' => 'image',
+                        ),
+                    ),
+                    'allorany' => 'all',
+                ),
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array (
+                'key' => 'field_540806a4aedd8',
+                'label' => 'Video',
+                'name' => 'video_url',
+                'type' => 'text',
+                'conditional_logic' => array (
+                    'status' => 1,
+                    'rules' => array (
+                        array (
+                            'field' => 'field_5408064daedd6',
+                            'operator' => '==',
+                            'value' => 'video',
+                        ),
+                    ),
+                    'allorany' => 'all',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'page-contact.php',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array (
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array (
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+}
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_page-background',
+		'title' => 'Page Background',
+		'fields' => array (
+			array (
+				'key' => 'field_5445a9ca41120',
+				'label' => 'Background Image',
+				'name' => 'background_image',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'medium',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_award-background',
+		'title' => 'Award Background',
+		'fields' => array (
+			array (
+				'key' => 'field_5445ab89c65a3',
+				'label' => 'Background Image',
+				'name' => 'background_image',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'award',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+

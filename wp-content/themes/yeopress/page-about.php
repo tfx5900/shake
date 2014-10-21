@@ -4,7 +4,7 @@ Template Name: About Page
 */
 ?>
 <?php get_header(); ?>
-<div class="wrapper page about-page">
+<div class="wrapper page about-page" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
   <div class="nav-menu">
     <ul>
       <li><a href="#about" class="selected">about shakes</a></li>
@@ -43,12 +43,6 @@ Template Name: About Page
 </div>
 
 <div class="tab hide" id="the-shakers">
-  <div class="content wrapper">
-    <h1 class="white">
-      Hi! We are the shakes team <br>
-      Nice to meet you :)
-    </h1>
-  </div>
 
   <div class="people-list">
     	<?php $posts = get_posts(array(

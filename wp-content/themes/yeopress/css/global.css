@@ -337,7 +337,7 @@ body.page-template-page-expertis-php {
   -moz-background-size: cover;
 }
 body.page-template-page-contact-php {
-  background: url(../images/contact-bg.jpg) no-repeat -100px 80px fixed #e6e7e8;
+  background: #000;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -350,6 +350,12 @@ body.page-template-page-about-php {
 }
 body.page-template-page-award-php {
   background: url(../images/award-bg.jpg) no-repeat fixed #000;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+body.page-template-page-careers-php {
+  background: url(../images/careers-background.jpg) no-repeat fixed #000;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -535,14 +541,14 @@ footer {
 .main-content .about-page .nav-menu ul li a {
   display: block;
   padding: 10px;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   color: #fff;
   text-align: center;
   width: 100%;
   font-size: 18px;
 }
 .main-content .about-page .nav-menu ul li a.selected {
-  border: 1px solid #f6303e;
+  border: 2px solid #f6303e;
   color: #f6303e;
 }
 .main-content .about-page .tabs .tab {
@@ -802,15 +808,14 @@ footer {
 }
 .work-page .single-work .left {
   width: 380px;
+  padding-left: 100px;
 }
 .work-page .single-work .left h2 {
-  text-align: center;
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 5px;
 }
 .work-page .single-work .left h4 {
-  text-align: center;
   font-style: italic;
 }
 .work-page .single-work .right {
@@ -981,6 +986,22 @@ footer {
 }
 .award-page .award-list a {
   margin-right: 80px;
+  width: 107px;
+  height: 176px;
+  position: relative;
+  display: inline-block;
+}
+.award-page .award-list a img {
+  width: 97px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.award-page .award-list a:hover img {
+  width: 107px;
+  top: -5px;
+  left: -5px;
 }
 .award-page .thumbnail {
   float: left;
@@ -989,7 +1010,10 @@ footer {
   display: none;
 }
 .award-page .nano {
-  height: 330px;
+  height: 240px;
+}
+.award-page .content p {
+  color: #fff;
 }
 
 .award-photos {
@@ -998,7 +1022,6 @@ footer {
 .award-photos img {
   width: 100%;
   height: auto;
-  padding: 0px 7.5px 0 7.5px;
 }
 .award-photos .owl-nav > div {
   text-indent: -9999px;
@@ -1033,10 +1056,16 @@ footer {
   margin-bottom: 25px;
 }
 .careers-page h1 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #fff;
 }
 .careers-page p {
   margin-bototm: 15px;
+  color: #fff;
+  width: 75%;
 }
 .careers-page .job-list {
   margin-bottom: 15px;
@@ -1044,29 +1073,31 @@ footer {
 .careers-page .job-list .job {
   display: block;
   width: 293px;
-  background: #c4bbb1;
+  border: 1px solid #fff;
   color: #fff;
   padding: 10px 0 10px 10px;
-  height: 30px;
   position: relative;
   margin-bottom: 15px;
   font-weight: 300;
   float: left;
   margin-right: 150px;
+  text-transform: uppercase;
 }
 .careers-page .job-list .job span {
   background: #f6303e;
   display: block;
   text-align: center;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   padding: 10px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -50px;
+  color: #fff;
 }
 .careers-page .job-list .job:hover {
-  background: #f6303e;
+  border: 1px solid #f6303e;
+  color: #f6303e;
 }
 .careers-page .note p {
   font-size: 11px;
@@ -1089,8 +1120,10 @@ footer {
   background: #fff;
   margin: 100px auto;
   width: 860px;
+  height: 500px;
   padding: 50px 90px;
   position: relative;
+  overflow: hidden;
 }
 .job-full-list .job h2 {
   font-size: 22px;
@@ -1107,52 +1140,76 @@ footer {
 .job-full-list .job p {
   margin-bottom: 25px;
 }
+.job-full-list .job .nano {
+  height: 300px;
+}
 
 .contact-page {
   position: relative;
+  margin-left: 60px;
 }
 .contact-page .content {
-  width: 530px;
+  width: 900px;
   position: absolute;
   top: 50px;
-  right: 0;
+  left: 0;
   padding-bottom: 50px;
 }
 .contact-page .content .top {
-  background: #000;
   color: #fff;
-  padding: 40px;
+  float: left;
+  width: 400px;
 }
 .contact-page .content .top h2 {
   font-size: 14px;
   font-weight: 700;
-  padding: 5px 0;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  padding: 10px;
+  border: 1px solid #fff;
   margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+  left: -7px;
 }
 .contact-page .content .top p {
   font-weight: 300;
   line-height: 1.4;
   margin-bottom: 10px;
+  text-transform: lowercase;
+  position: relative;
+  width: 360px;
+}
+.contact-page .content .top p span {
+  font-size: 10px;
+}
+.contact-page .content .top p.prefix-location:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 20px;
+  height: 26px;
+  background: url(../images/icon-place.png) no-repeat;
 }
 .contact-page .content .top a {
   color: #fff;
 }
 .contact-page .content .bottom {
   padding: 20px 40px;
-  background: #fff;
+  float: left;
+  width: 500px;
 }
 .contact-page .content .bottom input[type="text"], .contact-page .content .bottom input[type="email"] {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   display: block;
-  margin-bottom: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid #8d8e8d;
+  margin: -1px 0 0 0;
+  border: 1px solid #fff;
+  background: transparent;
   font-family: "Circular";
+  text-transform: lowercase;
+  color: #fff;
+  font-size: 14px;
 }
 .contact-page .content .bottom input[type="text"].no-border, .contact-page .content .bottom input[type="email"].no-border {
   border-bottom: none;
@@ -1162,24 +1219,37 @@ footer {
 }
 .contact-page .content .bottom textarea {
   width: 100%;
-  padding: 10px;
-  height: 100px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #8d8e8d;
+  padding: 8px;
+  height: 150px;
+  border: 1px solid #fff;
+  background: transparent;
   font-family: "Circular";
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
 }
 .contact-page .content .bottom textarea:focus {
   outline: none;
 }
 .contact-page .content .bottom input[type="submit"] {
-  float: right;
-  background: #f6303e;
+  background: transparent;
   color: #fff;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #fff;
   padding: 10px 15px;
   cursor: pointer;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  margin-top: -5px;
+  font-size: 14px;
+}
+.contact-page .bg video {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .store-page h1 {
@@ -1191,12 +1261,11 @@ footer {
 
 @media (min-width: 1650px) {
   .people-list {
-    width: 1600px;
-    padding-left: 15px;
+    width: 1550px;
   }
 
   .work-page .works {
-    width: 1620px;
+    width: 1550px;
   }
 
   header .wrapper {
@@ -1204,12 +1273,16 @@ footer {
     margin-right: 150px;
   }
 
+  .contact-page {
+    margin-left: 160px;
+  }
+
   .main-content .homepage h1 {
     left: 160px;
   }
 
   .main-content .page {
-    margin-top: 115px;
+    margin-top: 85px;
   }
 
   .award-single-page .thumbnail {
@@ -1296,6 +1369,32 @@ footer {
 
 .really_simple_share {
   margin-top: 10px;
+}
+
+.wpcf7-validation-errors, .wpcf7-mail-sent-ok {
+  color: #fff;
+}
+
+.wpcf7-not-valid-tip {
+  display: none !important;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
 }
 
 /*# sourceMappingURL=global.css.map */

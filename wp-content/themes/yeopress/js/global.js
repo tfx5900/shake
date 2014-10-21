@@ -40,6 +40,10 @@ function slide() {
 }
 
 $(function () {
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android|webOS|BlackBerry|IEMobile)/)) {
+        $('.slide.video').remove();
+    }
+
     setPageSize();
     $.event.add(window, 'resize', setPageSize);
     $.event.add(window, 'load', setPageSize);
@@ -115,6 +119,7 @@ $(function () {
         $('.job-full-list').fadeIn(500);
         $($(this).attr('href')).fadeIn(500, function(){
             setPageSize();
+            $(".nano").nanoScroller({ sliderMinHeight: 70, preventPageScrolling: true });
         });
     });
 
@@ -146,4 +151,20 @@ $(function () {
         $(this).find('h3').stop(0, 0).fadeOut(300);
     });
 
+    if ($('.page').is('div')) {
+        if ($('.page').attr('data-bg')) {
+            $('body').css('background','url('+$('.page').attr('data-bg')+') no-repeat fixed');
+            $('body').css('background-size','cover');
+        }
+    }
+
+    if ($('.contact-page').is('div')) {
+        if ($('.bg span').attr('data-type')==='image') {
+            $('body').css('background','url('+$('.bg span').attr('data-url')+') no-repeat fixed');
+            $('body').css('background-size','cover');
+        } else {
+
+        }
+
+    }
 });

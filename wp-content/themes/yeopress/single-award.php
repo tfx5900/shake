@@ -1,6 +1,6 @@
 <?php if (have_posts()) the_post();?>
 <?php get_header(); ?>
-<div class="page award-page award-single-page wrapper">
+<div class="page award-page award-single-page wrapper" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
     <div class="thumbnail">
         <?php the_post_thumbnail('full',array('title'=>''));?>
     </div>

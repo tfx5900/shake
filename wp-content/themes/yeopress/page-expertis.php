@@ -4,7 +4,7 @@ Template Name: Expertis Page
 */
 ?>
 <?php get_header(); ?>
-<div class="page expertis-page">
+<div class="page expertis-page" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
   <div class="wrapper expertis-list">
     <div class="content">
       <h1>At shakes we can provide a variety of resources

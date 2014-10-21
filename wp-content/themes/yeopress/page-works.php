@@ -4,7 +4,7 @@ Template Name: Work Page
 */
 ?>
 <?php get_header(); ?>
-<div class="page work-page">
+<div class="page work-page" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
   <div class="nav-menu">
     <?php $terms = get_terms('work_category',array('hide_empty'=>false));?>
 			<h2>

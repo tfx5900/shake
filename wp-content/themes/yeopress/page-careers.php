@@ -5,10 +5,7 @@ Template Name: Careers Page
 ?>
 <?php get_header(); ?>
 <?php if (have_posts()) the_post();?>
-<div class="page careers-page wrapper content">
-  <div class="banner">
-    <img src="<?php bloginfo('template_url');?>/images/careers-banner.jpg" alt="">
-  </div>
+<div class="page careers-page wrapper content" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
   <h1 class="red">Be a Shakes</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec libero mauris.
 Donec consequat malesuada eros in volutpat. Mauris feugiat elit id convallis dictum.
@@ -43,9 +40,11 @@ Pellentesque suscipit lorem eu hendrerit consectetur.</p>
     <div class="job" id="j<?php echo $post->ID?>">
       <h2 class="red">Position</h2>
       <h1><?php the_title();?></h1>
-      <div class="content">
-        <?php the_content();?>
-      </div>
+        <div class="nano">
+            <div class="content nano-content">
+                <?php the_content();?>
+            </div>
+        </div>
       <span class="close-button"><span></span></span>
     </div>
   <?php endforeach; ?>
