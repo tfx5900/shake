@@ -20,7 +20,7 @@
         <ul>
           <li><a href="<?php bloginfo('url');?>/about">who we are</a></li>
           <li><a href="<?php bloginfo('url');?>/expertis">what we do</a></li>
-          <li><a href="<?php bloginfo('url');?>/work">how we do it</a></li>
+          <li><a href="<?php bloginfo('url');?>/works">how we do it</a></li>
           <li><a href="<?php bloginfo('url');?>/awards">things we won</a></li>
           <li><a href="<?php bloginfo('url');?>/careers">we want you</a></li>
           <!-- <li><a href="javascript:void(0);">store</a></li> -->

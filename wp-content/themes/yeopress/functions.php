@@ -124,7 +124,7 @@ function create_works() {
 			'labels' => $labels,
 			'public' => true,
 			'supports' => $supports,
-			'has_archive' => true
+			'has_archive' => false
 		)
 	);
 }
@@ -153,7 +153,7 @@ function create_awards() {
 			'labels' => $labels,
 			'public' => true,
 			'supports' => $supports,
-			'has_archive' => true
+			'has_archive' => false
 		)
 	);
 }
@@ -182,7 +182,7 @@ function create_jobs() {
 			'labels' => $labels,
 			'public' => true,
 			'supports' => $supports,
-			'has_archive' => true
+			'has_archive' => false
 		)
 	);
 }
