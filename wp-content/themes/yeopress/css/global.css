@@ -598,6 +598,9 @@ footer {
 .content h2 {
   font-weight: 700;
   font-size: 20px;
+  line-height: 1.5em;
+  color: white;
+  text-align: center;
   margin-bottom: 16px;
 }
 .content h3 {
@@ -610,8 +613,12 @@ footer {
   margin-bottom: 20px;
 }
 
+.expertis-list .content h2 {
+    margin-bottom: 70px;
+}
+
 .people-list {
-  width: 960px;
+  /*width: 960px;*/
   /*padding-left: 10px;*/
   margin: 0 auto;
 }
@@ -620,8 +627,8 @@ footer {
   float: left;
   /*width: 305px;
   height: 226px;*/
-  width: 375px;
-  height: 283px;
+  width: 25%;
+  /*height: 283px;*/
   position: relative;
 }
 .people-list a h3 {
@@ -792,15 +799,17 @@ footer {
   color: #f6303e;
 }
 .work-page .works {
-  width: 965px;
+  /*width: 965px;*/
+  width: 100%;
   margin: 0 auto;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
 }
 .work-page .works .work {
   display: block;
   float: left;
-  width: 306px;
-  height: 204px;
+  /*width: 306px;*/
+  width: 20%;
+  /*height: 254px;*/
   position: relative;
   overflow: hidden;
 }
@@ -911,15 +920,21 @@ footer {
   display: block;
 }
 .expertis-page .expertis {
-  display: none;
+  /*display: none;
   background: rgba(255, 255, 255, 0.3);
   width: 840px;
   padding: 70px;
   position: absolute;
   top: 150px;
   left: 50%;
-  margin-left: -420px;
+  margin-left: -420px;*/
+  width: 100%;
+  height: 800px;
 }
+.expertis-page #engineering {
+    background: url(../images/8.jpg) no-repeat fixed;
+}
+
 .expertis-page .expertis h1 {
   font-size: 56px;
   font-weight: 400;
@@ -1005,14 +1020,14 @@ footer {
 .award-page h1 {
   padding-bottom: 15px;
   margin-bottom: 15px;
-  border-bottom: 1px solid #8d8e8d;
+  border-bottom: 2px solid #8d8e8d;
   color: #fff;
 }
 .award-page .award-list {
   margin-top: 50px;
 }
 .award-page .award-list a {
-  margin-right: 80px;
+  /*margin-left: 15px;*/
   width: 107px;
   height: 176px;
   position: relative;
@@ -1089,7 +1104,7 @@ footer {
   margin-bottom: 15px;
   border-bottom: 2px solid #aaa;
   padding-bottom: 5px;
-  font-size: 18px;
+  /*font-size: 18px;*/
   color: #fff;
 }
 .careers-page p {
@@ -1298,16 +1313,21 @@ footer {
 }
 
 @media (min-width: 1650px) {
+    .wrapper.expertis-list {
+        width: 1230px;
+    }
+
   .people-list {
-    width: 1876px;
-    /*width: auto;*/
+    /*width: 1876px;*/
+    width: auto;
     margin: auto;
     /*padding-left: 15px;*/
     /*width: 1550px;*/
   }
 
   .work-page .works {
-    width: 1550px;
+    /*width: 1550px;*/
+    width: auto;
   }
 
   header .wrapper {
@@ -1327,6 +1347,9 @@ footer {
     /*margin-top: 115px;*/
     /*margin-top: 60px;*/
     margin-top: 85px;
+  }
+  .main-content .page.work-page {
+    margin: 0;
   }
 
   .main-content .page.careers-page {

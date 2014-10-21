@@ -103,16 +103,16 @@ $(function () {
         e.stopPropagation();
     });
 
-    $('.expertis-list a').click(function (e) {
-        e.preventDefault();
-        $('.expertis-list').fadeOut(500);
-        $($(this).attr('href')).fadeIn(500);
-    });
+    // $('.expertis-list a').click(function (e) {
+    //     e.preventDefault();
+    //     $('.expertis-list').fadeOut(500);
+    //     $($(this).attr('href')).fadeIn(500);
+    // });
 
-    $('.expertis .big-close-button').click(function () {
-        $('.expertis').fadeOut(500);
-        $('.expertis-list').fadeIn(500);
-    });
+    // $('.expertis .big-close-button').click(function () {
+    //     $('.expertis').fadeOut(500);
+    //     $('.expertis-list').fadeIn(500);
+    // });
 
     $('.job-list a').click(function (e) {
         e.preventDefault();
