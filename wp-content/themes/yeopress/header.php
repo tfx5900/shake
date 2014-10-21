@@ -19,7 +19,7 @@
       <div class="right nav-menu">
         <ul>
           <li><a href="<?php bloginfo('url');?>/about">about</a></li>
-          <li><a href="<?php bloginfo('url');?>/work">works</a></li>
+          <li><a href="<?php bloginfo('url');?>/works">works</a></li>
           <li><a href="<?php bloginfo('url');?>/expertis">expertis</a></li>
           <li><a href="<?php bloginfo('url');?>/awards">award</a></li>
           <li><a href="<?php bloginfo('url');?>/careers">careers</a></li>
