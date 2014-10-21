@@ -5,7 +5,7 @@ Template Name: Careers Page
 ?>
 <?php get_header(); ?>
 <?php if (have_posts()) the_post();?>
-<div class="page careers-page wrapper content" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
+<div class="page careers-page wrapper content" <?php if (get_field('background_image')) { echo "data-bg='".get_field('background_image')."'"; } ?> >
   <h1 class="red">Be a Shakes</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec libero mauris.
 Donec consequat malesuada eros in volutpat. Mauris feugiat elit id convallis dictum.

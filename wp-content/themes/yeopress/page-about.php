@@ -4,7 +4,7 @@ Template Name: About Page
 */
 ?>
 <?php get_header(); ?>
-<div class="wrapper page about-page" <?php if get_field('background_image') echo "data-bg='".get_field('background_image')."'";?> >
+<div class="wrapper page about-page" <?php if (get_field('background_image')) { echo "data-bg='".get_field('background_image')."'"; } ?>>
   <div class="nav-menu">
     <ul>
       <li><a href="#about" class="selected">about shakes</a></li>
