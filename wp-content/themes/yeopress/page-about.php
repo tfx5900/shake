@@ -53,11 +53,12 @@ Template Name: About Page
 		));
 
     foreach ( $posts as $post ): setup_postdata( $post );
-        $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+        $thumbnailUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'shaker-thumbnail' ); 
+        // var_dump($thumbnailUrl);
         ?>
         
         <a href="#s<?php echo $post->ID;?>" class="person">
-            <img style="width: 100%;" src="<?php echo $thumbnailUrl; ?>" alt="">
+            <img style="width: 100%;" src="<?php echo $thumbnailUrl[0]; ?>" alt="">
       
             <h3><?php the_title();?><br/>
                 <span><?php the_field('job_title'); ?></span>

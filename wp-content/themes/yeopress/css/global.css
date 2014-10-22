@@ -337,12 +337,45 @@ body.home footer {
   /*-moz-background-size: cover;*/
 /*}*/
 
-body.page-template-page-expertis-php {
-  background: url(../images/expertis-bg.jpg) no-repeat fixed;
+.expertis-full-list {
+    height: 0;
+    color: white;
+}
+.expertis-full-list p {
+    font-size: 18px !important;
+}
+.expertis-list.wrapper {
+    margin: 0 !important;
+}
+.expertis-page.wrapper {
+    margin: 0 !important;
+    padding: 2em 150px !important;
+
+    height: 720px;
+  background: url(../images/expertis-bg.jpg) no-repeat ;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
 }
+
+.expertis-page .content {
+    width: 950px;
+    margin: auto;
+}
+
+#branding.expertis-page {
+  background: url(../images/expertis-branding-bg.jpg) no-repeat ;
+}
+#engineering.expertis-page {
+  background: url(../images/expertis-engineering-bg.jpg) no-repeat ;
+}
+#industrial.expertis-page {
+  background: url(../images/expertis-industrial-bg.jpg) no-repeat ;
+}
+#visual.expertis-page {
+  background: url(../images/expertis-visual-bg.jpg) no-repeat ;
+}
+
 body.page-template-page-contact-php {
   background: url(../images/contact-bg.jpg) no-repeat -100px 80px fixed #e6e7e8;
   background-size: cover;
@@ -569,6 +602,7 @@ footer {
 }
 .main-content .about-page .content {
   color: #fff;
+  margin: 0;
 }
 
 .main-content .about-page #philosophy .content {
@@ -637,8 +671,10 @@ footer {
   left: 0;
   /*width: 305px;
   height: 226px;*/
-  width: 375px;
-  height: 283px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
   /*background: red;*/
   background: #f6303e;
   padding: 30px;
@@ -897,8 +933,8 @@ footer {
 .expertis-page .icons a.engineering {
   background-image: url(../images/experis-icon-engineering.png);
 }
-.expertis-page .icons a.packaging {
-  background-image: url(../images/experis-icon-packaging.png);
+.expertis-page .icons a.visual {
+  background-image: url(../images/experis-icon-visual.png);
 }
 .expertis-page .icons a:hover {
   height: 205px;
@@ -906,14 +942,16 @@ footer {
   left: -10px;
 }
 .expertis-page .icons a:hover span {
-  left: 10px;
+  left: -25px;
   bottom: -20px;
 }
 .expertis-page .icons a span {
   position: absolute;
-  left: 0;
+  /*left: 0;*/
+  left: -35px;
   bottom: -30px;
-  width: 136px;
+  /*width: 136px;*/
+  width: 200px;
   text-align: center;
   color: #fff;
   font-size: 20px;
@@ -935,14 +973,14 @@ footer {
     background: url(../images/8.jpg) no-repeat fixed;
 }
 
-.expertis-page .expertis h1 {
+.expertis-page h1 {
   font-size: 56px;
   font-weight: 400;
   text-align: left;
   padding: 0;
   margin-bottom: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 .expertis-page .expertis h2 {
   font-size: 30px;
@@ -1012,6 +1050,10 @@ footer {
 
 .half {
   width: 50%;
+}
+
+.page.wrapper {
+    margin: 2em 150px;
 }
 
 .award-page {
@@ -1118,7 +1160,7 @@ footer {
 }
 .careers-page .job-list .job {
   display: block;
-  width: 293px;
+  width: 450px;
   border: 1px solid #fff;
   /*background: #c4bbb1;*/
   border: 2px solid white;
@@ -1133,7 +1175,8 @@ footer {
   text-transform: uppercase;
 }
 .careers-page .job-list .job span {
-  background: #f6303e;
+  /*background: #f6303e;*/
+  background: red;
   display: block;
   text-align: center;
   width: 36px;
@@ -1149,7 +1192,8 @@ footer {
   right: -50px;
 }
 .careers-page .job-list .job:hover {
-  border: 1px solid #f6303e;
+  /*border: 1px solid #f6303e;*/
+  border: 2px solid red;
   color: #f6303e;
 }
 .careers-page .note p {
@@ -1207,6 +1251,7 @@ footer {
   top: 50px;
   left: 0;
   padding-bottom: 50px;
+  margin: 0;
 }
 .contact-page .content .top {
   color: #fff;
@@ -1313,8 +1358,12 @@ footer {
 }
 
 @media (min-width: 1650px) {
+    .expertis-page.wrapper {
+        height: 960px;
+        padding-top: 130px !important;
+    }
     .wrapper.expertis-list {
-        width: 1230px;
+        /*width: 1230px;*/
     }
 
   .people-list {
@@ -1353,7 +1402,12 @@ footer {
   }
 
   .main-content .page.careers-page {
-    width: 1170px;
+    width: 1220px;
+    margin: 85px auto 0;
+  }
+
+  .main-content .page.award-page {
+    width: 1220px;
     margin: 85px auto 0;
   }
 
