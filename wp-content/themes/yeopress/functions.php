@@ -32,7 +32,7 @@ add_image_size('work-thumbnail',306,204,true);
 add_image_size('work-full',960,9999,false);
 // add_image_size('shaker-thumbnail',305,226,true);
 add_image_size('shaker-thumbnail',381,283,true);
-add_image_size('shaker-full',382,391,true);
+add_image_size('shaker-full',381,391,true);
 // add_image_size('shaker-full',375,391,true);
 
 

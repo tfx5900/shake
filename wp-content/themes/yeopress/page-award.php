@@ -22,9 +22,9 @@ Template Name: Award Page
 
         ?>
         <?php foreach ( $posts as $post ): setup_postdata( $post );?>
-          <a href="<?php the_permalink();?>">
+          <!-- <a href="<?php the_permalink();?>"> -->
             <?php the_post_thumbnail('full',array('title'=>''));?>
-          </a>
+          <!-- </a> -->
         <?php endforeach; ?>
     </div>
     

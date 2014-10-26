@@ -661,7 +661,7 @@ footer {
   float: left;
   /*width: 305px;
   height: 226px;*/
-  width: 25%;
+  width: 20%;
   /*height: 283px;*/
   position: relative;
 }
@@ -895,6 +895,7 @@ footer {
 }
 .work-page .single-work .photos {
   margin-top: 30px;
+  text-align: center;
 }
 .work-page .single-work .photos img {
   max-width: 100%;
@@ -1358,6 +1359,11 @@ footer {
 }
 
 @media (min-width: 1650px) {
+    .main-content .page.work-page .single-work {
+        width: 1220px;
+        margin: 85px auto 0;
+      }
+      
     .expertis-page.wrapper {
         height: 960px;
         padding-top: 130px !important;
