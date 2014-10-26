@@ -952,7 +952,7 @@ footer {
   left: -35px;
   bottom: -30px;
   /*width: 136px;*/
-  width: 200px;
+  width: 205px;
   text-align: center;
   color: #fff;
   font-size: 20px;
@@ -1161,7 +1161,7 @@ footer {
 }
 .careers-page .job-list .job {
   display: block;
-  width: 450px;
+  width: 320px;
   border: 1px solid #fff;
   /*background: #c4bbb1;*/
   border: 2px solid white;
@@ -1359,6 +1359,10 @@ footer {
 }
 
 @media (min-width: 1650px) {
+    .careers-page .job-list .job {
+        width: 450px;
+
+    }
     .main-content .page.work-page .single-work {
         width: 1220px;
         margin: 85px auto 0;

@@ -19,14 +19,12 @@ Template Name: Work Page
     <ul>
     <?php foreach ( $posts as $post ): setup_postdata( $post );
         $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-    ?>
-        <li>
+    ?><li>
             <a href="<?php the_permalink();?>" class="work <?php echo implode(" ", wp_get_post_terms($post->ID, 'work_category', array("fields" => "slugs")));?>">
                 <img style="width: 100%;" src="<?php echo $thumbnailUrl; ?>" alt="">
               
             </a>
-        </li>
-    <?php endforeach; ?>
+        </li><?php endforeach; ?>
     </ul>
 
     <div class="clear"></div>
