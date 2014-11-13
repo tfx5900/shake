@@ -52,7 +52,7 @@ $(function () {
     $(".nano").nanoScroller({ sliderMinHeight: 70, preventPageScrolling: true });
 
     //quick fix to hide vertial algin
-    $('.people-list h3, .work h3, .people-full-list, .job-full-list').hide();
+    $('.people-list .detail-person, .work h3, .people-full-list, .job-full-list').hide();
 
     if ($('.homepage').is('div')) {
         setInterval(slide, 5000);
@@ -89,8 +89,8 @@ $(function () {
 
     $('.people-list a').click(function (e) {
         e.preventDefault();
-        $('.people-full-list').fadeIn(500);
-        $($(this).attr('href')).fadeIn(500);
+        // $('.people-full-list').fadeIn(500);
+        // $($(this).attr('href')).fadeIn(500);
     });
 
     $('.people-full-list .close-button, .people-full-list').click(function (e) {
@@ -134,21 +134,28 @@ $(function () {
         setPageSize();
     });
 
-    $('.work-page .nav-menu a').click(function (e) {
+    $('.work-page a.nav-menu').click(function (e) {
         e.preventDefault();
         if (!$(this).hasClass('selected')) {
             var filter = $(this).attr('href').substr(1);
-            $('.work-page .nav-menu a.selected').removeClass("selected");
-            $(this).addClass('selected');
+            // $('.work-page .nav-menu a.selected').removeClass("selected");
+            // $(this).addClass('selected');
             $('.work').hide();
+            $('.work.nav-menu').fadeIn(500);
             $('.work.' + filter).fadeIn(500);
         }
     });
 
-    $('.works .work,.people-list .person').hover(function () {
+    $('.works .work').hover(function () {
         $(this).find('h3').stop(0, 0).fadeIn(500);
     }, function () {
         $(this).find('h3').stop(0, 0).fadeOut(500);
+    });
+
+    $('.people-list .person').hover(function () {
+        $(this).find('.detail-person').stop(0, 0).fadeIn(500);
+    }, function () {
+        $(this).find('.detail-person').stop(0, 0).fadeOut(500);
     });
 
     if ($('.page').is('div')) {

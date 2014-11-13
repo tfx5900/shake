@@ -25,18 +25,20 @@ Template Name: Expertis Page
               <div class="clear"></div>
             </div>
     </div>
-
-
     <div class="page expertis-page wrapper" id="branding">
         <div class="expertis-list wrapper">
             <div class="content">
-                <h1>Branding</h1>
-                <div class="illustration-img">
-                    <img src="" alt="">
+                <div class="icon"><img src="/wp-content/themes/yeopress/images/expertis-branding-icon-left.jpg" alt=""></div>
+                <div class="text">
+                    <h1>Branding</h1>
+                    <div class="illustration-img">
+                        <img src="" alt="">
+                    </div>
+                    <p>
+                        Our approach considers establishing clarity across our proprietary 3C’s brand factors that include brand value Creation, human Connection and likeability Communication. We believe that these factors have the power to ignite brand affection from a consumer’s perspective by establishing positive conditions for a brand’s justified benefits, emotional desirability and undivided trust. From a corporate perspective this framework extends to 9 sub factors, grouped around WHAT our brand stands for, WHO our brand represents and WHY our brand exists. Among the most powerful tools we have in our arsenal is our Archetypal Diamond. Developed around Carl Jung’s omnipresent Archetypal theory it helps to identify the heart and soul of your brand and delivers the energy that is required to vibrantly resonate with your consumers and drive it to a unique identity in the market. 
+                    </p>    
                 </div>
-                <p>
-                    Our approach considers establishing clarity across our proprietary 3C’s brand factors that include brand value Creation, human Connection and likeability Communication. We believe that these factors have the power to ignite brand affection from a consumer’s perspective by establishing positive conditions for a brand’s justified benefits, emotional desirability and undivided trust. From a corporate perspective this framework extends to 9 sub factors, grouped around WHAT our brand stands for, WHO our brand represents and WHY our brand exists. Among the most powerful tools we have in our arsenal is our Archetypal Diamond. Developed around Carl Jung’s omnipresent Archetypal theory it helps to identify the heart and soul of your brand and delivers the energy that is required to vibrantly resonate with your consumers and drive it to a unique identity in the market. 
-                </p>
+                
             </div>
         </div>
     </div>
@@ -85,11 +87,6 @@ Template Name: Expertis Page
             </div>
         </div>
     </div>
-    
   </div>
-
-
-
-
 
 <?php get_footer(); ?>

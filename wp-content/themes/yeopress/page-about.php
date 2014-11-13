@@ -57,34 +57,18 @@ Template Name: About Page
         // var_dump($thumbnailUrl);
         ?>
         
-        <a href="#s<?php echo $post->ID;?>" class="person">
+        <div class="person">
             <img style="width: 100%;" src="<?php echo $thumbnailUrl[0]; ?>" alt="">
-      
-            <h3><?php the_title();?><br/>
-                <span><?php the_field('job_title'); ?></span>
-            </h3>
 
-        </a>
+            <div class="detail-person">
+                <h2><?php the_title();?></h2><br>
+                <h3><?php the_field('job_title'); ?></h3><br><br>
+                <?php htmlentities(the_content());?>    
+            </div>
+        </div>
     <?php endforeach;?>
 
     <div class="clear"></div>
-  </div>
-
-  <div class="people-full-list">
-    <?php foreach ( $posts as $post ): setup_postdata( $post );?>
-      <div class="person wrapper" id="s<?php echo $post->ID;?>">
-        <div class="left photo">
-          <?php the_post_thumbnail('shaker-full',array('title'=>''));?>
-        </div>
-        <div class="right description content">
-          <h2><?php the_title();?></h2>
-          <h3><?php the_field('job_title'); ?></h3>
-          <?php the_content();?>
-        </div>
-        <span class="close-button"><span></span></span>
-        <div class="clear"></div>
-      </div>
-    <?php endforeach;?>
   </div>
 </div>
 
