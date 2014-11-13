@@ -134,15 +134,15 @@ $(function () {
         setPageSize();
     });
 
-    $('.work-page a.nav-menu').click(function (e) {
+    $('.work-page .nav-menu').click(function (e) {
         e.preventDefault();
         if (!$(this).hasClass('selected')) {
-            var filter = $(this).attr('href').substr(1);
+            var filter = $(this).attr('slug').substr(1);
             // $('.work-page .nav-menu a.selected').removeClass("selected");
             // $(this).addClass('selected');
             $('.work').hide();
-            $('.work.nav-menu').fadeIn(500);
-            $('.work.' + filter).fadeIn(500);
+            $('.work.nav-menu').show();
+            $('.work.' + filter).show();
         }
     });
 

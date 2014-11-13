@@ -19,7 +19,7 @@ Template Name: Work Page
     ?>
     <ul>
         <?php foreach ($terms as $term) {
-            echo "<li><a href='#$term->slug' class='work nav-menu $term->name'>$term->name</a></li>";
+            echo "<li><h1 slug='#$term->slug' class='work nav-menu $term->name'>$term->name</h1></li>";
         }?>
         <?php foreach ( $posts as $post ): setup_postdata( $post ); $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
         ?><li>
