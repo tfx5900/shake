@@ -960,7 +960,14 @@ footer {
   max-width: 100%;
   margin-bottom: 15px;
 }
-
+.down-button {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 5em;
+    cursor: pointer;
+    background: url(../images/expertis-down-button.png) center no-repeat;
+}
 .expertis-page h1 {
   color: #fff;
   text-align: center;

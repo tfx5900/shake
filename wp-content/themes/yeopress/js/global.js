@@ -1,5 +1,21 @@
 var windowsH = 0;
 var resetPos = false;
+var anchorList = ['#branding', '#industrial', '#engineering', '#visual'];
+var currentIndex = 0;
+function expertisUp() {
+    if (currentIndex > 0) {
+        expertisMoveTo(--currentIndex);
+    }
+}
+function expertisDown() {
+    if (currentIndex < 3) {
+        expertisMoveTo(++currentIndex);
+    }
+}
+function expertisMoveTo(index) {
+    location.href = anchorList[index];
+}
+
 function setPageSize() {
     windowsH = $(window).height();
     if (windowsH < 600) {
@@ -38,6 +54,18 @@ function slide() {
     }
     $('.slides').animate({top: move}, 1000);
 }
+
+
+$.fn.scrollEnd = function(callback, timeout) {
+    $(this).scroll(function(){
+        var $this = $(this);
+        if ($this.data('scrollTimeout')) {
+            clearTimeout($this.data('scrollTimeout'));
+        }
+        $this.data('scrollTimeout', setTimeout(callback,timeout));
+    });
+};
+
 
 $(function () {
     if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android|webOS|BlackBerry|IEMobile)/)) {
@@ -85,6 +113,11 @@ $(function () {
             $('.tab:visible').hide();
             $($(this).attr('href')).fadeIn(500);
         }
+    });
+    $(window).scrollEnd(function(){
+        var possitionY = Math.floor(Math.max(0, window.pageYOffset - 800) / 720);
+        currentIndex = possitionY;
+        console.log(currentIndex);
     });
 
     $('.people-list a').click(function (e) {
@@ -146,6 +179,10 @@ $(function () {
         }
     });
 
+    $('.down-button').click(function (e) {
+       expertisDown();
+    });
+
     $('.works .work').hover(function () {
         $(this).find('.text').stop(0, 0).fadeIn(500);
     }, function () {
@@ -175,3 +212,5 @@ $(function () {
 
     }
 });
+
+
