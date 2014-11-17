@@ -1,9 +1,6 @@
-<?php
-/*
-Template Name: Work Page
-*/
+<?php get_header();
+$domainUrl = get_site_url();
 ?>
-<?php get_header(); ?>
 <?php $terms = get_terms('work_category',array('hide_empty'=>false));?>
 <div class="page work-page" <?php if (get_field('background_image')) { echo "data-bg='".get_field('background_image')."'"; } ?> >
   <div class="works">
@@ -19,11 +16,22 @@ Template Name: Work Page
     ?>
     <ul>
         <?php foreach ($terms as $term) {
-            echo "<li><h1 slug='#$term->slug' class='work nav-menu $term->name'>$term->name</h1></li>";
+            echo "<li style='width: 20%; float: left;' class='nav-menu-holder $term->name {$classes}'>
+<div slug='#$term->slug' class='work nav-menu'>$term->name</div>
+<img style='width: 100%' src='$domainUrl/wp-content/themes/yeopress/images/how-we-do-dump.png'/>
+
+</li>";
         }?>
-        <?php foreach ( $posts as $post ): setup_postdata( $post ); $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-        ?><li>
-            <a href="<?php the_permalink();?>" class="work <?php echo implode(" ", wp_get_post_terms($post->ID, 'work_category', array("fields" => "slugs")));?>">
+        <?php foreach ( $posts as $post ):
+            $classes = implode(" ", wp_get_post_terms($post->ID, 'work_category', array("fields" => "slugs")));
+            setup_postdata( $post );
+            $thumbnailUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+        ?><li class='work <?php echo $classes ?>'>
+            <a href="<?php the_permalink();?>">
+                <div class="text">
+                    <h2><?php echo get_the_title(); ?></h2><br/>
+                    <?php the_content(); ?>
+                </div>
                 <img style="width: 100%;" src="<?php echo $thumbnailUrl; ?>" alt="">
 
             </a></li><?php endforeach; ?>

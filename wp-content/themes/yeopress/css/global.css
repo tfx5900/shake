@@ -845,16 +845,19 @@ footer {
   width: 100%;
   color: white;
   display: block;
-  padding-top: 110px;
+  /*padding-top: 110px;*/
   font-size: 24px;
+    position: absolute !important;
+    line-height: 1.4em;
+    padding-top: 5%;
 }
-.work-page .nav-menu.Branding {
+.work-page .Branding {
   background: #e76593;
 }
-.work-page .nav-menu.Graphic {
+.work-page .Graphic {
   background: #2cdcc5;
 }
-.work-page .nav-menu.Industrial {
+.work-page .Industrial {
   background: #efd03d;
 }
 .work-page .nav-menu a {
@@ -875,14 +878,35 @@ footer {
   margin: 0 auto;
   /*padding-left: 10px;*/
 }
+.work-page .works li {
+    /*overflow: hidden;*/
+}
 .work-page .works .work {
   display: block;
   float: left;
   /*width: 306px;*/
   width: 20%;
-  height: 254px;
+  /*height: 254px;*/
   position: relative;
   overflow: hidden;
+}
+.work-page .works .work .text {
+    padding: 1em;
+    color: white !important;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    background: red;
+}
+.work-page .works .work .text span {
+    color: white !important;
+}
+.work-page .works .work .text p {
+    line-height: 1.2em;
+}
+.work-page .works .work .text h2 {
+    font-size: 16px;
 }
 .work-page .works .work h3 {
   display: none;
@@ -1417,6 +1441,9 @@ footer {
         margin: auto;
         /*padding-left: 15px;*/
         /*width: 1550px;*/
+    }
+    .work-page .works .work .text h2 {
+        font-size: 20px;
     }
     .people-list .person .detail-person h2 {
         font-size: 20px;
