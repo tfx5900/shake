@@ -851,13 +851,26 @@ footer {
     line-height: 1.4em;
     padding-top: 5%;
 }
-.work-page .Branding {
+.work-page .work .text {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    /*position: absolute !important;*/
+    /*line-height: 1.4em;*/
+    padding-top: 22% !important;
+}
+.work-page .nav-menu-holder:hover {
+    background: #C4BAB0 !important;
+}
+.work-page .branding-design {
   background: #e76593;
 }
-.work-page .Graphic {
+.work-page .graphic-design {
   background: #2cdcc5;
 }
-.work-page .Industrial {
+.work-page .industrial-design {
   background: #efd03d;
 }
 .work-page .nav-menu a {
@@ -906,7 +919,7 @@ footer {
     line-height: 1.2em;
 }
 .work-page .works .work .text h2 {
-    font-size: 16px;
+    font-size: 18px;
 }
 .work-page .works .work h3 {
   display: none;
@@ -967,6 +980,28 @@ footer {
     height: 5em;
     cursor: pointer;
     background: url(../images/expertis-down-button.png) center no-repeat;
+}
+.right-navigator {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    vertical-align: middle;
+    cursor: pointer;
+    /*background: red;*/
+    padding-top: 300px;
+}
+.right-navigator li {
+    background: #808080;
+    display: block;
+    margin: 1em;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+.right-navigator li.selected {
+    background: white;
 }
 .expertis-page h1 {
   color: #fff;
@@ -1450,7 +1485,10 @@ footer {
         /*width: 1550px;*/
     }
     .work-page .works .work .text h2 {
-        font-size: 20px;
+        font-size: 24px;
+    }
+    .work-page .work .text {
+        font-size: 22px;
     }
     .people-list .person .detail-person h2 {
         font-size: 20px;
