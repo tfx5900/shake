@@ -129,13 +129,22 @@ $(function () {
             defaultHeight = 960;
         }
 
-        var possitionY = Math.floor(Math.max(0, window.pageYOffset - defaultHeight - 100) / defaultHeight);
+        var possitionY = Math.floor(Math.max(0, window.pageYOffset - defaultHeight) / defaultHeight);
         if (window.pageYOffset > defaultHeight) {
             updateRightNavigation(currentIndex);
         } else {
             updateRightNavigation(-1);
         }
         currentIndex = possitionY;
+    });
+
+    $('.right-navigator li').click(function(e) {
+        e.preventDefault();
+
+        var rank = parseInt($(this).attr('rank'), 10);    
+        expertisMoveTo(rank);
+        // updateRightNavigation(rank);
+        
     });
 
     $('.people-list a').click(function (e) {

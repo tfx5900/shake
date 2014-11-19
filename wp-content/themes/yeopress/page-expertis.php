@@ -91,10 +91,10 @@ Template Name: Expertis Page
 <div class="down-button"></div>
 <div class="right-navigator hidden">
     <ul>
-        <li class="branding"></li>
-        <li class="industrial"></li>
-        <li class="engineering"></li>
-        <li class="visual"></li>
+        <li class="branding" rank="0"></li>
+        <li class="industrial" rank="1"></li>
+        <li class="engineering" rank="2"></li>
+        <li class="visual" rank="3"></li>
     </ul>
 </div>
 <?php get_footer(); ?>

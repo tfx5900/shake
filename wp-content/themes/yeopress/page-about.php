@@ -44,6 +44,7 @@ Template Name: About Page
 <div class="tab hide" id="the-shakers">
 
   <div class="people-list">
+    <ul>
     	<?php $posts = get_posts(array(
 			'nopaging' => true,
 			'post_type' => 'shaker',
@@ -54,20 +55,15 @@ Template Name: About Page
 
     foreach ( $posts as $post ): setup_postdata( $post );
         $thumbnailUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'shaker-thumbnail' ); 
-        // var_dump($thumbnailUrl);
-        ?>
-        
-        <div class="person">
+        ?><li class="person">
             <img style="width: 100%;" src="<?php echo $thumbnailUrl[0]; ?>" alt="">
-
             <div class="detail-person">
                 <h2><?php the_title();?></h2><br>
                 <h3><?php the_field('job_title'); ?></h3><br><br>
                 <?php htmlentities(the_content());?>    
             </div>
-        </div>
-    <?php endforeach;?>
-
+        </li><?php endforeach;?>
+    </ul>
     <div class="clear"></div>
   </div>
 </div>
