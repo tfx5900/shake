@@ -129,13 +129,12 @@ $(function () {
             defaultHeight = 960;
         }
 
-        var possitionY = Math.floor(Math.max(0, window.pageYOffset - defaultHeight) / defaultHeight);
+        currentIndex = Math.floor(Math.max(0, window.pageYOffset - defaultHeight) / defaultHeight);
         if (window.pageYOffset > defaultHeight) {
             updateRightNavigation(currentIndex);
         } else {
             updateRightNavigation(-1);
         }
-        currentIndex = possitionY;
     });
 
     $('.right-navigator li').click(function(e) {
