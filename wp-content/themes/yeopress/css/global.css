@@ -622,6 +622,11 @@ footer {
     margin: auto;
 }
 
+.main-content #our-believers .content {
+    width: 920px;
+    margin: auto;
+}
+
 .main-content .about-page #about .content {
     width: 920px;
     margin: auto;
@@ -640,6 +645,7 @@ footer {
   margin-bottom: 30px;
   font-weight: 300;
   line-height: 1.3em;
+    color: white;
 }
 .content h2 {
   font-weight: 700;
@@ -661,6 +667,20 @@ footer {
 
 .expertis-list .content h2 {
     margin-bottom: 70px;
+}
+
+.believer-list {
+    padding: 0 2em;
+    color: white;
+}
+
+.believer-list .believer {
+    width: 16.6666%;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    float: left;
+    display: inline-block;
 }
 
 .people-list {

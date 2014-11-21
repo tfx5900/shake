@@ -34,7 +34,7 @@ add_image_size('work-full',960,9999,false);
 add_image_size('shaker-thumbnail',381,283,true);
 add_image_size('shaker-full',381,391,true);
 // add_image_size('shaker-full',375,391,true);
-
+add_image_size('believer-thumbnail',310,160,true);
 
 // Clean up the <head>
 function removeHeadLinks() {
@@ -207,6 +207,35 @@ function create_homeslides() {
     $supports = array('title', 'editor', 'custom-fields', 'revisions', 'thumbnail');
 
     register_post_type( 'homeslide',
+        array(
+            'labels' => $labels,
+            'public' => true,
+            'supports' => $supports,
+            'has_archive' => true
+        )
+    );
+}
+
+//Believers
+add_action( 'init', 'create_believers' );
+function create_believers() {
+    $labels = array(
+        'name' => _x('Our Believers', 'post type general name'),
+        'singular_name' => _x('Our Believer', 'post type singular name'),
+        'add_new' => _x('Add New', 'Our Believer'),
+        'add_new_item' => __('Add New Our Believer'),
+        'edit_item' => __('Edit Our Believer'),
+        'new_item' => __('New Our Believer'),
+        'view_item' => __('View Our Believer'),
+        'search_items' => __('Search Our Believers'),
+        'not_found' =>  __('No Our Believers found'),
+        'not_found_in_trash' => __('No Our Believers found in Trash'),
+        'parent_item_colon' => ''
+    );
+
+    $supports = array('title', 'editor', 'custom-fields', 'revisions', 'thumbnail');
+
+    register_post_type( 'believer',
         array(
             'labels' => $labels,
             'public' => true,

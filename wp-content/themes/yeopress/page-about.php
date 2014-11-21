@@ -31,15 +31,36 @@ Template Name: About Page
         <?php the_field('philosophy');?>
       </div>
     </div>
-    <div class="tab" id="our-believers">
-      <div class="content">
-        <?php the_field('our-believers');?>
-      </div>
-    </div>
   </div>
+</div>
 
+
+
+<div class="tab hide" id="our-believers">
+    <div class="content">
+        <?php the_field('our-believers');?>
+    </div>
+    <div class="believer-list">
+        <ul>
+            <?php $posts = get_posts(array(
+                'nopaging' => true,
+                'post_type' => 'believer',
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'suppress_filters'=>0
+            ));
+
+            foreach ( $posts as $post ): setup_postdata( $post );
+                $thumbnailUrl = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'believer-thumbnail' );
+                ?><li class="believer">
+                <img style="width: 100%;" src="<?php echo $thumbnailUrl[0]; ?>" alt="">
+                </li><?php endforeach;?>
+        </ul>
+        <div class="clear"></div>
+    </div>
 
 </div>
+
 
 <div class="tab hide" id="the-shakers">
 
@@ -67,6 +88,9 @@ Template Name: About Page
     <div class="clear"></div>
   </div>
 </div>
+
+
+
 
 
 <?php get_footer(); ?>
