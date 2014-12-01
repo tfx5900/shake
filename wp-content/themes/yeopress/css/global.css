@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* ==========================================================================
-	Imports
+    Imports
 /* ========================================================================== */
 /* ==========================================================================
-	Variables
+    Variables
 /* ========================================================================== */
 /* Directories */
 /* Colors */
@@ -191,8 +191,8 @@ img {
 }
 
 /* ==========================================================================
-	Print styles.
-	Inlined to avoid required HTTP connection: h5bp.com/r
+    Print styles.
+    Inlined to avoid required HTTP connection: h5bp.com/r
 /* ========================================================================== */
 @media print {
   * {
@@ -256,7 +256,7 @@ img {
   }
 }
 /* ==========================================================================
-	Variables
+    Variables
 /* ========================================================================== */
 /* Directories */
 /* Colors */
@@ -345,13 +345,13 @@ body.home footer {
     font-size: 18px !important;
 }
 .expertis-list.wrapper {
-    margin: 0 !important;
+    margin: 0 auto !important;
 }
 .expertis-page.wrapper {
     margin: 0 !important;
-    padding: 2em 150px !important;
-
+    padding: 2em 5% !important;
     height: 720px;
+    clear: both;
   background: url(../images/expertis-bg.jpg) no-repeat ;
   background-size: cover;
   -webkit-background-size: cover;
@@ -359,7 +359,7 @@ body.home footer {
 }
 
 .expertis-page .content {
-    width: 950px;
+    /*width: 950px;*/
     margin: auto;
 }
 
@@ -369,12 +369,12 @@ body.home footer {
 
 #branding.expertis-page .content .icon {
     float: left;
-    margin-top: 100px;
+    margin: 100px 40px 40px 0;
 }
 
 #branding.expertis-page .content .text {
-    float: right;
-    width: 500px;
+    float: left;
+    max-width: 700px;
 }
 
 #engineering.expertis-page {
@@ -450,8 +450,8 @@ a {
 .wrapper {
   /*width: 960px;*/
   width: auto;
-  margin-left: 150px;
-  margin-right: 150px;
+  /*margin-left: 150px;*/
+  /*margin-right: 150px;*/
   padding: 0 10px;
   /*margin: 0 auto;*/
   position: relative;
@@ -464,8 +464,7 @@ header {
 header .wrapper {
   width: auto;
   min-width: 960px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 5%;
 }
 header .left .main-logo {
   display: block;
@@ -476,7 +475,8 @@ header .left .main-logo {
   margin-top: 30px;
 }
 header .nav-menu {
-  margin-top: 48px;
+  margin-top: 43px;
+  display: none;
 }
 header .nav-menu ul {
   float: left;
@@ -596,6 +596,7 @@ footer {
 .main-content .about-page .nav-menu ul li a {
   display: block;
   padding: 10px;
+  margin: 10px 0 0;
   border: 2px solid #fff;
   color: #fff;
   text-align: center;
@@ -623,12 +624,12 @@ footer {
 }
 
 .main-content #our-believers .content {
-    width: 920px;
+    /*width: 920px;*/
     margin: auto;
 }
 
 .main-content .about-page #about .content {
-    width: 920px;
+    /*width: 920px;*/
     margin: auto;
 }
 
@@ -666,7 +667,7 @@ footer {
 }
 
 .expertis-list .content h2 {
-    margin-bottom: 70px;
+    /*margin-bottom: 70px;*/
 }
 
 .believer-list {
@@ -1033,7 +1034,7 @@ footer {
   padding: 30px;
 }
 .expertis-page .icons {
-  width: 960px;
+  max-width: 960px;
   height: 232px;
   margin: auto;
 }
@@ -1041,7 +1042,7 @@ footer {
   display: block;
   width: 150px;
   height: 180px;
-  margin-right: 120px;
+  margin: 70px 100px 0 0;
   float: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1179,7 +1180,8 @@ footer {
 }
 
 .page.wrapper {
-    margin: 2em 150px;
+    /*margin: 2em 150px;*/
+    margin: 2em 5%;
 }
 
 .award-page {
@@ -1279,19 +1281,19 @@ footer {
   margin-bototm: 15px;
   color: white;
   color: #fff;
-  width: 75%;
+  /*width: 75%;*/
 }
 .careers-page .job-list {
   margin-bottom: 15px;
 }
 .careers-page .job-list .job {
   display: block;
-  width: 320px;
+  width: 300px;
   border: 1px solid #fff;
   /*background: #c4bbb1;*/
   border: 2px solid white;
   color: #fff;
-  padding: 10px 0 10px 10px;
+  padding: 10px 0 10px 15px;
   height: 38px;
   position: relative;
   margin-bottom: 15px;
@@ -1372,7 +1374,7 @@ footer {
   margin-left: 60px;
 }
 .contact-page .content {
-  width: 900px;
+  /*width: 900px;*/
   position: absolute;
   top: 50px;
   left: 0;
@@ -1382,7 +1384,8 @@ footer {
 .contact-page .content .top {
   color: #fff;
   float: left;
-  width: 400px;
+  /*width: 400px;*/
+  margin: 0 40px 0 0;
 }
 .contact-page .content .top h2 {
   font-size: 14px;
@@ -1419,9 +1422,8 @@ footer {
   color: #fff;
 }
 .contact-page .content .bottom {
-  padding: 20px 40px;
+  padding: 20px 40px 20px 0;
   float: left;
-  width: 500px;
 }
 .contact-page .content .bottom input[type="text"], .contact-page .content .bottom input[type="email"] {
   width: 100%;
@@ -1483,7 +1485,39 @@ footer {
   text-align: center;
 }
 
+@media (min-width: 360px) {
+    .contact-page .content .bottom {
+        width: auto;
+    }    
+
+
+}
+
+
+
+@media (min-width: 1024px) {
+    header .nav-menu {
+      display: inline;
+    }
+
+    header .nav-menu ul li {
+        margin-right: 10px;
+    }
+     .contact-page .content .bottom {
+        width: 500px;
+    }
+
+    .main-content .about-page #about .content {
+        width: 920px;
+        margin: auto;
+    }
+}
+
 @media (min-width: 1650px) {
+    header .nav-menu ul li {
+        margin-right: 40px;
+    }
+
     .right-navigator {
         padding-top: 450px;
     }
@@ -1499,12 +1533,14 @@ footer {
     .expertis-page.wrapper {
         height: 960px;
         padding-top: 130px !important;
+        /*padding: 130px 150px 0 !important;*/
     }
+
     .expertis-list .content h2 {
         font-size: 30px;
     }
     .wrapper.expertis-list {
-        /*width: 1230px;*/
+        width: 1230px;
     }
 
     .people-list {
@@ -1528,11 +1564,6 @@ footer {
   .work-page .works {
     /*width: 1550px;*/
     width: auto;
-  }
-
-  header .wrapper {
-    margin-left: 150px;
-    margin-right: 150px;
   }
 
   .contact-page {
@@ -1581,6 +1612,12 @@ footer {
         /*height: 95px;*/
     }
 }
+
+
+
+
+
+
 /** nano scroller**/
 /** initial setup **/
 .nano {
@@ -1655,7 +1692,7 @@ footer {
   color: white;
 }
 
-.wpcf7-not-valid-tip {
+.wpcf7-not-valid-tip { 
   display: none !important;
 }
 
