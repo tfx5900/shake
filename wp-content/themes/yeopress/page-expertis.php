@@ -28,7 +28,7 @@ Template Name: Expertis Page
     <div class="page expertis-page wrapper" id="branding">
         <div class="expertis-list wrapper">
             <div class="content">
-                <div class="icon"><img src="/wp-content/themes/yeopress/images/expertis-branding-icon-left.jpg" alt=""></div>
+                <div class="icon"><img src="/wp-content/themes/yeopress/images/expertis-branding-icon-left.jpg" alt="" style="width: 100%;"></div>
                 <div class="text">
                     <h1>Branding</h1>
                     <div class="illustration-img">
