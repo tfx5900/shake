@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -475,6 +476,21 @@ header .left .main-logo {
   text-indent: -99999px;
   margin-top: 30px;
 }
+header .nav-menu.hamburger {
+    display: inline-block;
+    margin: 1em 2em 1em 0;
+    float: right;
+}
+header .nav-menu.hamburger ul {
+    float: right;
+    width: 160px;
+}
+header .nav-menu.hamburger ul li {
+    margin: 1em 2em 1em 0;
+}
+header .nav-menu.hamburger .social-icons {
+    margin: 1em;
+}
 header .nav-menu {
   margin-top: 43px;
   display: none;
@@ -591,9 +607,9 @@ footer {
   width: 180px;
   margin-right: 10px;
 }
-.main-content .about-page .nav-menu ul li:last-of-type {
+/*.main-content .about-page .nav-menu ul li:last-of-type {
   margin-right: 0;
-}
+}*/
 .main-content .about-page .nav-menu ul li a {
   display: block;
   padding: 10px;
@@ -966,22 +982,24 @@ footer {
   font-weight: 300;
 }
 .work-page .single-work .left {
-  width: 380px;
-  padding-left: 100px;
-  /*margin: 0 0 2em 0;*/
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 .work-page .single-work .left h2 {
-  font-weight: 700;
-  font-size: 18px;
-  margin: 5px;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 2em 0 1em;
+    /*text-align: left;*/
 }
 .work-page .single-work .left h4 {
   font-style: italic;
 }
 .work-page .single-work .right {
-  max-width: 560px;
+  width: 100%;
   padding-left: 20px;
-  margin: 2em 0 0 0;
+  margin: 2em 0 0;
 }
 .work-page .single-work .photos {
   margin-top: 30px;
@@ -1170,7 +1188,8 @@ footer {
 }
 
 .half {
-  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .page.wrapper {
@@ -1188,7 +1207,7 @@ footer {
   color: #fff;
 }
 .award-page .award-list {
-  margin-top: 50px;
+    margin: 50px auto 50px;
 }
 .award-page .award-list a {
   /*margin-left: 15px;*/
@@ -1338,9 +1357,9 @@ footer {
   display: none;
   background: #fff;
   margin: 100px auto;
-  width: 860px;
+  max-width: 860px;
   height: 500px;
-  padding: 50px 90px;
+  padding: 50px 5%;
   position: relative;
   overflow: hidden;
 }
@@ -1509,6 +1528,33 @@ footer {
     header .nav-menu {
       display: inline;
     }
+    .work-page .single-work .left {
+        width: 380px;
+        margin-left: 7%;
+        text-align: left;
+    }
+    .work-page .single-work .left h2 {
+        color: black;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 2em 0 1em;
+        text-align: left;
+    }
+    .work-page .single-work .left h4 {
+      font-style: italic;
+    }
+    .work-page .single-work .right {
+      max-width: 560px;
+      padding-left: 20px;
+      margin: 2em 0 0 0;
+    }
+
+    .half {
+        float: left;
+    }
+    .award-page .award-list {
+        float: right;
+    }
 
     header .nav-menu ul li {
         margin-right: 10px;
@@ -1517,7 +1563,7 @@ footer {
         width: 500px;
     }
 
-    .main-content .about-page #about .content {
+    .main-content .about-page #about .content, .main-content .about-page #philosophy .content {
         width: 920px;
         margin: auto;
     }

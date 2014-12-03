@@ -9,25 +9,6 @@ Template Name: Award Page
   <div class="content">
     <h1>Regconition</h1>
 
-
-    <div class="award-list" style="float: right;">
-        <?php
-          $posts = get_posts(array(
-                  'nopaging' => true,
-                  'post_type' => 'award',
-                  'orderby' => 'menu_order',
-                  'order' => 'ASC',
-                  'suppress_filters'=>0
-                ));
-
-        ?>
-        <?php foreach ( $posts as $post ): setup_postdata( $post );?>
-          <!-- <a href="<?php the_permalink();?>"> -->
-            <?php the_post_thumbnail('full',array('title'=>''));?>
-          <!-- </a> -->
-        <?php endforeach; ?>
-    </div>
-    
     <div class="half">
         <p style="color: red;">2014</p>
         <p>
@@ -50,8 +31,23 @@ Template Name: Award Page
             Design competition
         </p>
     </div>
+    <div class="award-list">
+        <?php
+          $posts = get_posts(array(
+                  'nopaging' => true,
+                  'post_type' => 'award',
+                  'orderby' => 'menu_order',
+                  'order' => 'ASC',
+                  'suppress_filters'=>0
+                ));
 
-
+        ?>
+        <?php foreach ( $posts as $post ): setup_postdata( $post );?>
+          <!-- <a href="<?php the_permalink();?>"> -->
+            <?php the_post_thumbnail('full',array('title'=>''));?>
+          <!-- </a> -->
+        <?php endforeach; ?>
+    </div>
   </div>
 </div>
 <?php get_footer(); ?>
