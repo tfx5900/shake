@@ -2,6 +2,8 @@ var windowsH = 0;
 var resetPos = false;
 var anchorList = ['#branding', '#industrial', '#engineering', '#visual'];
 var currentIndex = 0;
+var hamburgerState = 0; // 0: normal, 1: clicked
+
 function expertisUp() {
     if (currentIndex > 0) {
         expertisMoveTo(--currentIndex);
@@ -173,6 +175,18 @@ $(function () {
     //     $('.expertis-list').fadeIn(500);
     // });
 
+    $('.hamburger .icon-holder').click(function (e) {
+        if (hamburgerState == 0) {
+            $('.icon-holder .normal').addClass('hidden');
+            $('.icon-holder .clicked').removeClass('hidden');
+            $('.hamburger ul').removeClass('hidden');
+        } else {
+            $('.icon-holder .normal').removeClass('hidden');
+            $('.icon-holder .clicked').addClass('hidden');
+            $('.hamburger ul').addClass('hidden');
+        }   
+        hamburgerState = 1 - hamburgerState;
+    });
     $('.job-list a').click(function (e) {
         e.preventDefault();
         $('.job-full-list').fadeIn(500);

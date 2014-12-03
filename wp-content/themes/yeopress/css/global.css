@@ -462,11 +462,13 @@ a {
 header {
   height: 80px;
   background: #000;
+
 }
 header .wrapper {
-  width: auto;
-  min-width: 960px;
+  /*width: auto;*/
+  /*min-width: 960px;*/
   margin: 0 5%;
+  z-index: 10;
 }
 header .left .main-logo {
   display: block;
@@ -478,18 +480,34 @@ header .left .main-logo {
 }
 header .nav-menu.hamburger {
     display: inline-block;
-    margin: 1em 2em 1em 0;
+    margin: 1em 0;
+    position: relative;
+    right: -40px;
     float: right;
 }
 header .nav-menu.hamburger ul {
-    float: right;
-    width: 160px;
+    width: 170px;
+    clear: both;
+    float: none;
+    padding: 0 0 0 20px;
+    background: black;
 }
 header .nav-menu.hamburger ul li {
     margin: 1em 2em 1em 0;
 }
+header .nav-menu.hamburger .icon-holder {
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: red;
+    float: right;    
+}
 header .nav-menu.hamburger .social-icons {
-    margin: 1em;
+    margin: 25px 10px 0 40px;
+}
+header .nav-menu.hamburger .menu-holder {
+    width: 170px;
 }
 header .nav-menu {
   margin-top: 43px;
@@ -1527,6 +1545,9 @@ footer {
 @media (min-width: 1024px) {
     header .nav-menu {
       display: inline;
+    }
+    header .nav-menu.hamburger {
+        display: none;
     }
     .work-page .single-work .left {
         width: 380px;

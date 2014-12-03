@@ -32,6 +32,30 @@
         </div>
         <div class="clear"></div>
       </div>
+
+        <div class="hamburger nav-menu">
+            <div class="social-icons">
+                <a href="#" class="facebook icon" target="_blank"></a>
+                <a href="#" class="twitter icon" target="_blank"></a>
+            </div>
+            <div class="menu-holder">
+                <div class="icon-holder">
+                    <div class="normal">=</div>
+                    <div class="clicked hidden">X</div>
+                </div>
+                <ul class="hidden">
+                    <li><a href="<?php bloginfo('url');?>/about">who we are</a></li>
+                    <li><a href="<?php bloginfo('url');?>/expertis">what we do</a></li>
+                    <li><a href="<?php bloginfo('url');?>/works">how we do it</a></li>
+                    <li><a href="<?php bloginfo('url');?>/awards">things we won</a></li>
+                    <li><a href="<?php bloginfo('url');?>/careers">we want you</a></li>
+                    <!-- <li><a href="javascript:void(0);">store</a></li> -->
+                    <li><a href="<?php bloginfo('url');?>/contact">get in touch</a></li>
+                </ul>
+            </div>
+            
+            <div class="clear"></div>
+        </div>
       <div class="clear"></div>
     </div>
   </header>
