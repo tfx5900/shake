@@ -481,7 +481,7 @@ header .left .main-logo {
 header .nav-menu.hamburger {
     display: inline-block;
     margin: 1em 0;
-    position: relative;
+    position: absolute;
     right: -40px;
     float: right;
 }
