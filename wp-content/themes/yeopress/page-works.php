@@ -15,8 +15,9 @@ $domainUrl = get_site_url();
     ?>
     <ul>
         <?php foreach ($terms as $term) {
+            $tmp = explode('-', $term->slug);
             echo "<li class='nav-menu-holder $term->name $term->slug'>
-<div slug='#$term->slug' class='work nav-menu'>$term->name</div>
+<div slug='#{$tmp[0]}' class='work nav-menu'>$term->name</div>
 <img style='width: 100%' src='$domainUrl/wp-content/themes/yeopress/images/how-we-do-dump.png'/>
 
 </li>";

@@ -213,6 +213,7 @@ $(function () {
         e.preventDefault();
         if (!$(this).hasClass('selected')) {
             var filter = $('.nav-menu', this).attr('slug').substr(1);
+            console.log(filter);
             // $('.work-page .nav-menu a.selected').removeClass("selected");
             // $(this).addClass('selected');
             $('.work').hide();
