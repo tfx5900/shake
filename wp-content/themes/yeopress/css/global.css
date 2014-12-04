@@ -482,15 +482,19 @@ header .nav-menu.hamburger {
     display: inline-block;
     margin: 1em 0;
     position: absolute;
-    right: -40px;
+    right: 0px;
     float: right;
 }
 header .nav-menu.hamburger ul {
     width: 170px;
     clear: both;
     float: none;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 17px;
     background: black;
+
+    position: absolute;
+    top: 66px;
+    right: -30%;
 }
 header .nav-menu.hamburger ul li {
     margin: 1em 2em 1em 0;
@@ -504,7 +508,7 @@ header .nav-menu.hamburger .icon-holder {
     float: right;    
 }
 header .nav-menu.hamburger .social-icons {
-    margin: 25px 10px 0 40px;
+    margin: 25px 10px 0 60px;
 }
 header .nav-menu.hamburger .menu-holder {
     width: 170px;
@@ -1827,3 +1831,100 @@ footer {
 }
 
 /*# sourceMappingURL=global.css.map */
+
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+    float: right;
+    position: relative;
+    width: 30px;
+    top: 16px;
+    right: 0;
+    height: 30px;
+}
+.toggled-on .menu-toggle span {
+    background: rgba(0, 0, 0, 0);
+}
+.toggled-on .og-menu {
+    opacity: 1;
+    display: block;
+}
+.toggled-on .menu-toggle span:after {
+    transform: translateY(0px) rotate(-45deg);
+    -webkit-transform: translateY(0px) rotate(-45deg);
+}
+.toggled-on .menu-toggle span:before {
+    transform: translateY(0px) rotate(45deg);
+    -webkit-transform: translateY(0px) rotate(45deg);
+}
+
+    .menu-toggle {
+        display: block !important;
+    }
+    .og-menu {
+        background: #fff;
+        opacity: 0;
+        overflow: hidden;
+        padding: 10px;
+        position: absolute;
+        right: -10px;
+        top: 45px;
+        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -ms-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        width: 210px;
+        z-index: 999;
+        display: none;
+    }
+    .menu-toggle span {
+        background: white;
+        height: 4px;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+    }
+    .menu-toggle span:after {
+        background: white;
+        content: "";
+        height: 4px;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-9px) rotate(0deg);
+        -webkit-transform: translateY(-9px) rotate(0deg);
+        -ms-transform: translateY(-9px) rotate(0deg);
+        -o-transform: translateY(-9px) rotate(0deg);
+        width: 30px;
+    }
+    .menu-toggle span:before {
+        background: white;
+        content: "";
+        height: 4px;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(9px) rotate(0deg);
+        -webkit-transform: translateY(9px) rotate(0deg);
+        -ms-transform: translateY(9px) rotate(0deg);
+        -o-transform: translateY(9px) rotate(0deg);
+        width: 30px;
+    }
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

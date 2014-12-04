@@ -38,11 +38,8 @@
                 <a href="#" class="facebook icon" target="_blank"></a>
                 <a href="#" class="twitter icon" target="_blank"></a>
             </div>
-            <div class="menu-holder">
-                <div class="icon-holder">
-                    <div class="normal">=</div>
-                    <div class="clicked hidden">X</div>
-                </div>
+            <div class="menu-holder noselect">
+                <h1 class="menu-toggle"><span></span></h1>
                 <ul class="hidden">
                     <li><a href="<?php bloginfo('url');?>/about">who we are</a></li>
                     <li><a href="<?php bloginfo('url');?>/expertis">what we do</a></li>
