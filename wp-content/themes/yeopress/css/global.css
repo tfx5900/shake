@@ -350,7 +350,7 @@ body.home footer {
 }
 .expertis-page.wrapper {
     margin: 0 !important;
-    padding: 2em 5% !important;
+    padding: 2em 5% 4em !important;
     /*height: 720px;*/
     clear: both;
     background: url(../images/expertis-bg.jpg) no-repeat ;
@@ -467,7 +467,7 @@ header {
 header .wrapper {
   /*width: auto;*/
   /*min-width: 960px;*/
-  margin: 0 5%;
+  margin: 0 4%;
   z-index: 10;
 }
 header .left .main-logo {
@@ -1075,26 +1075,27 @@ footer {
   display: block;
   width: 150px;
   height: 180px;
-  margin: 30px 70px;
+  margin: 30px 35px;
   float: left;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center bottom;
   position: relative;
 }
 .expertis-page .icons a:last-of-type {
-  margin-right: 0;
+  /*margin-right: 0;*/
 }
 .expertis-page .icons a.branding {
-  background-image: url(../images/experis-icon-branding.png);
+  background-image: url(../images/expertis-icon-branding.png);
 }
 .expertis-page .icons a.industrial {
-  background-image: url(../images/experis-icon-industrial.png);
+  background-image: url(../images/expertis-icon-industrial.png);
 }
 .expertis-page .icons a.engineering {
-  background-image: url(../images/experis-icon-engineering.png);
+  background-image: url(../images/expertis-icon-engineering.png);
 }
 .expertis-page .icons a.visual {
-  background-image: url(../images/experis-icon-visual.png);
+  background-image: url(../images/expertis-icon-visual.png);
 }
 .expertis-page .icons a:hover {
   /*height: 205px;*/
@@ -1107,12 +1108,12 @@ footer {
   /*bottom: -20px;*/
 }
 .expertis-page .icons a span {
-  position: absolute;
+  position: relative;
   /*left: 0;*/
-  left: -35px;
-  bottom: -30px;
+  /*left: -35px;*/
+  bottom: -200px;
   /*width: 136px;*/
-  width: 205px;
+  /*width: 205px;*/
   text-align: center;
   color: #fff;
   font-size: 20px;
@@ -1612,7 +1613,7 @@ footer {
         width: 16.6666%;
     }
     .expertis-page .icons a {
-        margin: 70px 50px;
+        margin: 70px 44px;
     }
 }
 

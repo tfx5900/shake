@@ -1,5 +1,6 @@
 <?php if (have_posts()) the_post(); ?>
 <?php get_header(); ?>
+
 <div class="page work-page">
   <div class="wrapper single-work">
     <div class="left">
