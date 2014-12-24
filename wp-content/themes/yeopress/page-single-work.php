@@ -10,7 +10,7 @@ Template Name: Single Work Page
       <div class="content">
         <h2>Twin Lotus packaging</h2>
         <h4>packaging design</h4>
-      </div>      
+      </div>
     </div>
     <div class="right">
       <div class="content">

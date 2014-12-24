@@ -486,7 +486,7 @@ header .nav-menu.hamburger {
     float: right;
 }
 header .nav-menu.hamburger ul {
-    width: 170px;
+    width: 230px;
     clear: both;
     float: none;
     padding: 0 0 0 17px;
@@ -1013,7 +1013,6 @@ footer {
     font-weight: 700;
     font-size: 18px;
     margin: 2em 0 1em;
-    /*text-align: left;*/
 }
 .work-page .single-work .left h4 {
   font-style: italic;
@@ -1024,7 +1023,7 @@ footer {
   margin: 2em 0 0;
 }
 .work-page .single-work .photos {
-  margin-top: 30px;
+  margin-top: 70px;
   text-align: center;
 }
 .work-page .single-work .photos img {
@@ -1427,7 +1426,7 @@ footer {
   font-size: 14px;
   font-weight: 700;
   padding: 10px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   margin-bottom: 5px;
   display: inline-block;
   position: relative;
@@ -1502,7 +1501,7 @@ footer {
   display: block;
   width: 100%;
   text-transform: uppercase;
-  margin-top: -5px;
+  margin-top: -7px;
   font-size: 14px;
 }
 .contact-page .bg video {
@@ -1555,8 +1554,9 @@ footer {
         display: none;
     }
     .work-page .single-work .left {
-        width: 380px;
-        margin-left: 7%;
+        /*width: 380px;*/
+        /*margin-left: 7%;*/
+        margin: auto;
         text-align: left;
     }
     .work-page .single-work .left h2 {
@@ -1569,10 +1569,16 @@ footer {
     .work-page .single-work .left h4 {
       font-style: italic;
     }
+    .work-page .single-work .left .content {
+        width: 960px;
+        margin: auto;
+    }
     .work-page .single-work .right {
-      max-width: 560px;
-      padding-left: 20px;
-      margin: 2em 0 0 0;
+        max-width: 560px;
+        padding-left: 20px;
+        margin: 2em 0 0 0;
+        position: absolute;
+        right: 10%;
     }
 
     .half {
