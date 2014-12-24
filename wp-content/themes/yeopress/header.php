@@ -6,6 +6,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ) ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
     <!-- <meta name="viewport" content="width=device-width"> -->
     <title><?php bloginfo( 'name' ); wp_title( '|', true, 'left' );?></title>
     <?php wp_head() ?>
